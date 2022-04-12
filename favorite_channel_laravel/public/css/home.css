@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+
+/* 全体 */
+body {
+    box-sizing: border-box;
+}
+
+/* ヘッダー */
+header {
+    height: 85px;
+    width: 100%;
+    margin: 0;
+    padding: 15px 0 10px;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    background-color: white;
+    position: fixed;
+    top: 0; 
+    right: 0;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+header span {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
+
+/* メイン */
+.main-contents {
+    position:  relative;
+}
+
+.main-image {
+    width: 100%;
+	height: 100vh;
+}
+
+.main-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    position: relative;
+}
+
+.main-access {
+    position: absolute; 
+    background-color:  rgba(85, 85, 85, 0.4);
+    border-radius: 10px;
+    color:  #fff;
+    width:  80%;
+    height: 60%;
+    font-size: 30px;         
+    top:  0;                   
+    bottom:  0;                 
+    left:  0;                  
+    right:  0;                 
+    margin: auto;              
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.first-introduction p {
+    display: block;
+    width: 25%;
+    margin: 15px auto 0;
+    color: white;
+	font-size: clamp(14px, 2.3vw, 24px);
+    background-color: rgba(255, 55, 55, 0.7);
+    border: 1px solid red;
+    border-radius: 10px;
+    cursor: pointer;
+    line-height: 50px;
+}
+
+.first-introduction p:hover {
+    background-color: red;
+}
+
+.main-access .contacts {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto;
+    width: 90%;
+} 
+
+.main-access .contact {
+    align-items: center;
+    width: 40%;
+    height: 50%;
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.main-access .green {
+    background-color: rgba(170, 227, 57, 0.9);
+    border: 1px solid green;
+}
+
+.main-access .blue {
+    background-color: rgba(57, 105, 227, 0.9);
+    border: 1px solid blue;
+}
+
+.main-access .contacts h5 {
+    margin-bottom: 20px;
+    font-size: clamp(12px, 1.5vw, 20px);
+
+}
+
+.main-access .contacts img {
+    padding-bottom: 30px;
+    width: 35%;
+}
+
+.main-access .contacts button {
+    padding: 10px 20px;
+    font-size: clamp(12px, 2.0vw, 20px);
+    border: 2px solid white;
+}
+
+/* フッター */
+footer .space {
+    width: 100%;
+    height: 20px;
+    background-color: red;
+    position: fixed;
+    bottom: 0; 
+    right: 0;
+    opacity: 0.7;
+}
+
+/* モーダル全体 */
+#js-modal-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    display: none;
+}
+
+.search-modal {
+    background-color: white;
+    width:  50%;
+    height: 400px;
+    position: absolute;
+    top:  0;                   
+    bottom:  0;                 
+    left:  0;                  
+    right:  0;                 
+    margin: auto;            
+    z-index: 100;
+    border-radius: 10px;
+    overflow: hidden scroll;
+    display: none;
+    -ms-overflow-style: none;    /* IE, Edge 対応 */
+    scrollbar-width: none;       /* Firefox 対応 */
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: bold;
+}
+
+.search-modal::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
+}
+
+.search-modal .modal-header {
+    display: block;
+    text-align: center;
+    background-color: rgb(0, 211, 0);
+    color: white;
+}
+
+.search-modal .categories {
+    width: 60%;
+    margin: 0 auto;    
+}
+
+.search-modal .category h5,.search-buttom{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* 投稿モーダル */
+.up-modal .modal-header {
+    background-color: rgb(61, 61, 255);
+}
+
+.up-modal .categories {
+    width: 80%;
+}
+
+#basic-addon3 {
+    font-size: 14px;
+}
+
+/* ログインモーダル */
+.induce-modal {
+    display: none;
+    height: 450px;
+}
+
+.induce-modal .modal-header {
+    background-color: rgb(208, 208, 0);
+}
+
+.induce-modal form{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.induce-modal form .edit-text {
+    text-align: center;
+    font-size: 12px;
+}
+
+.introduction-modal {
+    background-color: white;
+    width:  60%;
+    height: 450px;
+    position: absolute;
+    top: 0;                   
+    bottom: 0;                 
+    left: 0;                  
+    right: 0;                 
+    margin: auto;  
+    z-index: 100;
+    border-radius: 10px;
+    display: none;
+    -ms-overflow-style: none;    /* IE, Edge 対応 */
+    scrollbar-width: none;       /* Firefox 対応 */
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: bold;
+    background-image: url(../img/header-background-image.jpg);
+    background-size: cover;
+}
+
+.introduction-modal::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
+}
+
+
+.introduction-text-box {
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.8);
+    margin: 60px 10% 0;
+    color: white;
+    font-size: clamp(12px, 2.0vw, 20px);
+    border-radius: 10px;
+    line-height: 40px;
+}
+
+.category textarea {
+    resize: none;
+}
+
+#loading {
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s;
+    background-color: rgb(79, 79, 79);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+  .spinner {
+    width: 100px;
+    height: 100px;
+    margin: 200px auto;
+    background-color: #fff;
+    border-radius: 100%;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+  }
+  /* ローディングアニメーション */
+  @keyframes sk-scaleout {
+    0% {
+      transform: scale(0);
+    } 100% {
+      transform: scale(1.0);
+      opacity: 0;
+    }
+  }
+  
+  .loaded {
+    opacity: 0;
+    visibility: hidden;
+  } 
+  
