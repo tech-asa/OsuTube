@@ -1,7 +1,16 @@
+@push('css')
+    <link href="{{ asset('css/login-register.css') }}" rel="stylesheet">
+@endpush
+
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+
+<div class="main-image">
+    <img class="cover" src="img/main_image.jpg" alt="">
+</div>
+
+<div class="container" id="login-container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

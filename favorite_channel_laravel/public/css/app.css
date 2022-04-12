@@ -9,8 +9,48 @@
 */
 
 /* ローディング画面 */
-#wrapper{
-	display: none;
+body {
+  box-sizing: border-box;
+}
+
+/* ヘッダー */
+header {
+  height: 85px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+  background-color: white;
+  position: fixed;
+  top: 0; 
+  right: 0;
+  letter-spacing: 2px;
+  z-index: 1;
+}
+
+.header-contents {
+  margin-top: 20px;
+}
+
+.header-contents h1{
+  font-size: 35px;
+}
+
+
+
+header span {
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-logout {
+  position: absolute;
+  top: 25;
+  right: 10;
 }
 
 :root {

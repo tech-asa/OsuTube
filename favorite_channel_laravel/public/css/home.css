@@ -1,31 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
 
-/* 全体 */
-body {
-    box-sizing: border-box;
-}
-
-/* ヘッダー */
-header {
-    height: 85px;
-    width: 100%;
-    margin: 0;
-    padding: 15px 0 10px;
-    font-family: 'Anton', sans-serif;
-    text-align: center;
-    background-color: white;
-    position: fixed;
-    top: 0; 
-    right: 0;
-    letter-spacing: 2px;
-    z-index: 1;
-}
-
-header span {
-    background-color: red;
-    color: white;
-    border-radius: 10px;
-}
 
 /* メイン */
 .main-contents {
@@ -198,26 +172,7 @@ footer .space {
     font-size: 14px;
 }
 
-/* ログインモーダル */
-.induce-modal {
-    display: none;
-    height: 450px;
-}
-
-.induce-modal .modal-header {
-    background-color: rgb(208, 208, 0);
-}
-
-.induce-modal form{
-    width: 70%;
-    margin: 0 auto;
-}
-
-.induce-modal form .edit-text {
-    text-align: center;
-    font-size: 12px;
-}
-
+/* 紹介モーダル */
 .introduction-modal {
     background-color: white;
     width:  60%;

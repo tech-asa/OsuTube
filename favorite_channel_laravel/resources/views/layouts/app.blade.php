@@ -21,13 +21,11 @@
 </head>
 
 <body>
-    <div id="wrapper">
         @include('layouts.header')
         
         @yield('content')
         
         @include('layouts.footer')
-    </div>
     <!-- Scripts -->
     <script src="{{ asset('js/home.js') }}"></script>
 </body>

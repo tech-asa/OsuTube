@@ -1,6 +1,16 @@
-<header >
+<header>
     <div class="header-contents">
         <h1 class="header-title">Osu<span>Tube</span></h1>
         <!-- <p class="header-subtext"></p> -->
+    </div>
+    <div class="header-logout">
+        @if (Route::has('login'))
+        @auth
+        <form action="{{ route('logout') }}" method="post">
+            @csrf
+            <input class="btn btn-outline-primary" type="submit" value="ログアウト">
+        </form>
+        @endauth
+        @endif   
     </div>
 </header>
