@@ -1,5 +1,5 @@
 @push('css')
-    <link href="{{ asset('css/home.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
 @endpush
 
 @extends('layouts.app')
@@ -7,9 +7,6 @@
 @section('content')
 
 <main>
-    <div id="loading">
-        <div class="spinner"></div>
-    </div>
     <div id="js-modal-background"></div>
     <div class="search-modal" id="js-search-modal">
         <div class="modal-header">
@@ -201,36 +198,39 @@
             <img class="cover" src="img/main_image.jpg" alt="">
         </div>
         <div class="main-access">
-            <div class="first-introduction">
-                <p id="js-introduction">このサイトって？</p>
-            </div>
-            <div class="contacts">
-                <div class="contact green">
-                    <h5>マッチする配信者を探してみよう!</h5>
-                    <img class="grass" src="img/grass.png" alt="">
-                    <br>
-                    <button type="button" class="btn btn-success" id="js-search">検索する</button>               
+            <div class="">
+                <div class="first-introduction">
+                    <p id="js-introduction">このサイトって？</p>
                 </div>
-                <div class="contact blue">
-                    <h5>あなたのイチオシを紹介してみよう!</h5>
-                    <img class="star" src="img/star.png" alt="">
-                    <br>
-                    @if (Route::has('login'))
+                <div class="contacts">
+                    <div class="contact green">
+                        <h5>マッチする配信者を探してみよう!</h5>
+                        <img class="grass" src="img/grass.png" alt="">
+                        <br>
+                        <button type="button" class="btn btn-success" id="js-search">検索する</button>               
+                    </div>
+                    <div class="contact blue">
+                        <h5>あなたのイチオシを紹介してみよう!</h5>
+                        <img class="star" src="img/star.png" alt="">
+                        <br>
+                        @if (Route::has('login'))
                         @auth
-                            <button type="button" class="btn btn-primary" id="js-up">投稿する</button>
+                        <button type="button" class="btn btn-primary" id="js-up">投稿する</button>
                         @else
-                            <button type="button" class="btn btn-primary">
-                                <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">ログインする</a>
-                            </button>
-                            @if (Route::has('register'))
-                            <button type="button" class="btn btn-primary">
-                                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">新規登録する</a>
-                                </button>
-                                @endif
+                        <button type="button" class="btn btn-primary">
+                            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline login-edit-button">ログインする</a>
+                        </button>
+                        @if (Route::has('register'))
+                        <button type="button" class="btn btn-primary">
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline login-edit-button">新規登録する</a>
+                        </button>
+                        @endif
                         @endauth
-                    @endif       
-                </div>       
+                        @endif       
+                    </div>       
+                </div>
+            </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
+@endsection

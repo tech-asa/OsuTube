@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
 
-
 /* メイン */
 .main-contents {
     position:  relative;
@@ -25,9 +24,9 @@
     border-radius: 10px;
     color:  #fff;
     width:  80%;
-    height: 60%;
+    height: 30rem;
     font-size: 30px;         
-    top:  0;                   
+    top: 0;                   
     bottom:  0;                 
     left:  0;                  
     right:  0;                 
@@ -40,7 +39,7 @@
 .first-introduction p {
     display: block;
     width: 25%;
-    margin: 15px auto 0;
+    margin: 40px auto 0;
     color: white;
 	font-size: clamp(14px, 2.3vw, 24px);
     background-color: rgba(255, 55, 55, 0.7);
@@ -95,6 +94,15 @@
     padding: 10px 20px;
     font-size: clamp(12px, 2.0vw, 20px);
     border: 2px solid white;
+}
+
+.login-edit-button {
+    text-decoration: none;
+    color: white;
+}
+
+.login-edit-button:hover {
+    color: white;
 }
 
 /* フッター */
@@ -198,7 +206,6 @@ footer .space {
     display:none;
 }
 
-
 .introduction-text-box {
     text-align: center;
     background-color: rgba(255, 0, 0, 0.8);
@@ -212,37 +219,3 @@ footer .space {
 .category textarea {
     resize: none;
 }
-
-#loading {
-    width: 100vw;
-    height: 100vh;
-    transition: all 1s;
-    background-color: rgb(79, 79, 79);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-  }
-  .spinner {
-    width: 100px;
-    height: 100px;
-    margin: 200px auto;
-    background-color: #fff;
-    border-radius: 100%;
-    animation: sk-scaleout 1.0s infinite ease-in-out;
-  }
-  /* ローディングアニメーション */
-  @keyframes sk-scaleout {
-    0% {
-      transform: scale(0);
-    } 100% {
-      transform: scale(1.0);
-      opacity: 0;
-    }
-  }
-  
-  .loaded {
-    opacity: 0;
-    visibility: hidden;
-  } 
-  

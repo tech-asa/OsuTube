@@ -9,7 +9,7 @@
 */
 
 /* ローディング画面 */
-body {
+* {
   box-sizing: border-box;
 }
 
@@ -36,8 +36,6 @@ header {
 .header-contents h1{
   font-size: 35px;
 }
-
-
 
 header span {
   background-color: red;
