@@ -10,6 +10,7 @@ class Channel extends Model
     protected $fillable = [
         'user_id',
         'name',
+        'url',
         'genre',
         'streaming_method',
         'gender',

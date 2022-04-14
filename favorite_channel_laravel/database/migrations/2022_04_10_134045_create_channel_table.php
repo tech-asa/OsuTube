@@ -17,6 +17,7 @@ class CreateChannelTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('name');
+            $table->string('url');
             $table->integer('genre');
             $table->integer('streaming_method');
             $table->integer('gender');
