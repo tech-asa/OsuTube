@@ -15,10 +15,10 @@ class CreateChannelTable extends Migration
     {
         Schema::create('channels', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user-id');
+            $table->integer('user_id');
             $table->string('name');
             $table->integer('genre');
-            $table->integer('string-method');
+            $table->integer('streaming_method');
             $table->integer('gender');
             $table->integer('voice');
             $table->integer('distributor');
