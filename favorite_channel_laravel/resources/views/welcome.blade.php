@@ -6,13 +6,15 @@
 
 @section('content')
 <main>
+    <!-- 検索モーダル -->
     <div id="js-modal-background"></div>
     <div class="search-modal" id="js-search-modal">
         <div class="modal-header">
             <h4 class="modal-title">SEARCH</h4>
             <p class="modal-subtitle">気になりそうな配信者を探してみよう！</p>
         </div>
-        <form class="categories" action="" method="get">
+        <form class="categories" action="" method="GET">
+            @csrf
             <div class="category">
                 <h5 class="category-title">ジャンル</h5>
                 <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="Genre">
@@ -71,12 +73,15 @@
             </div>
         </form>
     </div>
+
+    <!-- 投稿モーダル -->
     <div class="search-modal up-modal" id="js-up-modal">
         <div class="modal-header">
             <h4 class="modal-title">POST</h4>
             <p class="modal-subtitle">あなたの推しを周りの人と共有しよう！</p>
         </div>
-        <form class="categories" action="" method="post">
+        <form class="categories" action="" method="POST">
+            @csrf
             <div class="category">
                 <h5 class="channel-name">チャンネル投稿</h5>
             </div>
@@ -157,33 +162,8 @@
             </div>
         </form>
     </div>
-    <div class="search-modal induce-modal" id="js-induce-modal">
-        <div class="modal-header">
-            <h4 class="modal-title">投稿するにはログインが必要になります。</h4>
-        </div>
-        <!-- ログインフォーム -->
-        <form>
-            <div class="mt-3 mb-2">
-                <label for="exampleInputEmail1" class="form-label">メールアドレス</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="◯◯◯◯◯@gmail.com" aria-describedby="emailHelp" value="">
-                <div id="emailHelp" class="form-text">メールアドレスは他人に公開されません。</div>
-            </div>
-            <div class="mb-4">
-                <label for="exampleInputPassword1" class="form-label">パスワード</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" value="">
-            </div>
-            <div class="d-grid gap-2 col-6 mx-auto">
-            <button type="submit" class="btn btn-warning">ログイン</button>
-            </div>
-            <p class="edit-text">アカウントをお持ちでない方は新規登録が必要になります。</p>
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <a href="{{ route('register') }}">
-                    <button type="submit" class="btn btn-warning">新規登録画面へ</button>
-                </a>
-            </div> 
-            <p class="edit-text">新規登録はおよそ1分程度で完了できます。</p>
-        </form>
-    </div>
+
+    <!-- サイト紹介モーダル -->
     <div class="introduction-modal" id="js-introduction-modal">
         <div class="introduction-text-box">
             <p class="introduction-text">当サイトは<br>未来を紡ぐ、金の卵な配信者を
@@ -192,6 +172,7 @@
         </div>
     </div>
 
+    <!-- 最初から見える部分 -->
     <div class="main-contents">
         <div class="main-image"></div>
         <div class="main-access">

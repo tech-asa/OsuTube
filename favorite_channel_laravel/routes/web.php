@@ -16,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::get('/home', [App\Http\Controllers\ChannelController::class, 'home'])->name('home');
+// Route::post('/', [App\Http\Controllers\ChannelController::class, 'home'])->name('home');
+
 Auth::routes();
+
+//投稿フォームページ
+Route::get('/channel', 'ChannelController@showCreateForm')->name('channels.create');
+Route::post('/channel', 'ChannelController@create');
+
+//投稿確認ページ
+Route::get('/channel/{post}', 'ChannelController@detail')->name('channels.detail');
 
