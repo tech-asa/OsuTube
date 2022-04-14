@@ -7,7 +7,7 @@
 @section('content')
 <main>
     <div class="main-container">
-        <div class="" id="login-container">
+        <div id="login-container">
             <div class="contents">
                 <div class="title">{{ __('ログイン') }}</div>  
                     <div class="">
@@ -53,16 +53,16 @@
                                 </div>
                             </div>
                             
-                            <div class="login-end">
+                            <div class="login-end mb-4">
                                 <button type="submit" class="btn btn-warning">
                                     {{ __('ログイン') }}
                                 </button>
-                                <br>
+                                <!-- <br>
                                 @if (Route::has('password.request'))
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('パスワードを忘れてしまった場合') }}
                                 </a>
-                                @endif
+                                @endif -->
                             </div>
                         </form>
                         <div class="new-edit mb-4">
