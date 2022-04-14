@@ -1,7 +1,6 @@
 @extends('layouts.app')
  
 @section('content')
-
 <main>
     <div class="contents">
         <div class="search-header">
@@ -45,3 +44,4 @@
         </div>    
     </div>
 </main>
+@endsection

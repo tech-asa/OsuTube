@@ -10,6 +10,8 @@
 
 /* ローディング画面 */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -47,9 +49,22 @@ header span {
 
 .header-logout {
   position: absolute;
-  top: 25;
-  right: 10;
+  top: 0;
+  right: 0;
+  margin: 25px 20px 0 0;
 }
+
+/* フッター */
+footer .space {
+  width: 100%;
+  height: 20px;
+  background-color: red;
+  position: fixed;
+  bottom: 0; 
+  right: 0;
+  opacity: 0.7;
+}
+
 
 :root {
   --bs-blue: #0d6efd;
