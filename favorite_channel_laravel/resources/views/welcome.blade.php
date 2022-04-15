@@ -13,11 +13,11 @@
             <h4 class="modal-title">SEARCH</h4>
             <p class="modal-subtitle">気になりそうな配信者を探してみよう！</p>
         </div>
-        <form class="categories" action="" method="GET">
+        <form class="categories" action="{{ route('channel.index') }}" method="GET">
             @csrf
             <div class="category">
                 <h5 class="category-title">ジャンル</h5>
-                <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="Genre">
+                <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="Genre" name="genre">
                     <option value="0">-- 選択してください --</option>
                     <option value="1">エンタメ</option>
                     <option value="2">ビジネス・学び</option>
@@ -25,7 +25,7 @@
             </div>
             <div class="category">
                 <h5 class="category-title">主な投稿動画</h5>
-                <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="streaming-method">
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="streaming-method" name="streaming_method">
                     <option value="0">-- 指定無し --</option>
                     <option value="1">Live配信</option>
                     <option value="2">編集動画</option>
@@ -35,7 +35,7 @@
             </div>
             <div class="category">
                 <h5 class="category-title">性別</h5>
-                <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="gender">
+                <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="gender" name="gender">
                     <option value="0">-- 指定無し --</option>
                     <option value="1">男性</option>
                     <option value="2">女性</option>
@@ -45,7 +45,7 @@
             </div>
             <div class="category">
                 <h5 class="category-title">声質</h5>
-                <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="voice">
+                <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="voice" name="voice">
                     <option value="0">-- 指定無し --</option>
                     <option value="1">高め</option>
                     <option value="2">普通</option>
@@ -59,7 +59,7 @@
             </div>
             <div class="category">
                 <h5 class="category-title">配信者情報</h5>
-                <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="distributor">
+                <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="distributor" name="distributor">
                     <option value="0">-- 指定無し --</option>
                     <option value="1">音声のみ</option>
                     <option value="2">本人顔出し</option>

@@ -22,4 +22,6 @@ Route::get('/channel', [App\Http\Controllers\ChannelController::class, 'create']
 // 投稿を押した時
 Route::post('/channel', [App\Http\Controllers\ChannelController::class, 'store'])->name('channel.store');
 
+Route::get('/channel', [App\Http\Controllers\ChannelController::class, 'index'])->name('channel.index');
+
 Auth::routes();

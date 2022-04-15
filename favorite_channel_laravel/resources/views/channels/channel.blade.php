@@ -1,3 +1,7 @@
+@push('css')
+    <link href="{{ asset('css/post-list.css') }}" rel="stylesheet">
+@endpush
+
 @extends('layouts.app')
  
 @section('content')
@@ -8,9 +12,10 @@
             <p>以下の配信者の方が条件にヒットしました。</p>
             <a href=""><button type="button" class="btn btn-success">条件を変えてもう一度検索</button></a>
         </div>
+        @foreach ($channels as $channel)
         <div class="content">
             <div class="update-time">
-                <p>更新日時:<span>◯◯月◯◯日</span></p>
+                <p>更新日時:<span>{{ $channel->updated_at }}</span></p>
             </div>
             <div class="edit-user">
                 <div class="edit-user-status">
@@ -20,7 +25,7 @@
                     </div>
                 </div>
                 <div class="balloon1-left">
-                    <p>ああああああああああああああああああああああああああああああああああああああああああああああああああああ</p>
+                    <p>{{ $channel->comment }}</p>
                 </div>
             </div>
             <div class="bg-red oblique-gloss solid-shadow channel">
@@ -28,7 +33,7 @@
                     <img src="img/youtube_image.jpg" alt="">
                 </div>
                 <div class="channel-status">
-                    <a href="">チャンネル名</a>
+                    <a href="">{{ $channel->name }}</a>
                     <div class="categories">
                         <p class="genre-category"><span>ジャンル:</span>エンタメ</p>
                         <p class="streaming-method-category"><span>主な投稿動画:</span>エンタメ</p>
@@ -41,7 +46,8 @@
             <div class="report">
                 <button type="button" class="btn btn-outline-danger">通報する</button>
             </div>
-        </div>    
+        </div>  
+        @endforeach  
     </div>
 </main>
 @endsection

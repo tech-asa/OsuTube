@@ -13,12 +13,20 @@ class ChannelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $channels = Channel::orderBy('created_at', 'asc')->get();
-        return view('channels.channel', [
-        'channels' => $channels,
-        ]);
+        $genre = $request->input('genre');
+        $streaming_method = $request->input('streaming_method');
+        $gender = $request->input('gender');
+        $voice = $request->input('voice');
+        $distributor = $request->input('distributor');
+        $comment = $request->input('comment');
+ 
+        $query = Channel::query();
+
+        $channels = $query->get();
+ 
+        return view('channels.channel', compact('channels'));   
     }
 
     /**
@@ -45,7 +53,8 @@ class ChannelController extends Controller
             $channel->name = $request->name;
             $channel->url = $request->url;
             $channel->genre = $request->genre;
-            $channel->streaming_method = $request->streaming_method;
+            $channel->streaming_method = $requestreaming_method;
+            $channel->streaming_method = $requestreaming_method;
             $channel->gender = $request->gender;
             $channel->voice = $request->voice;
             $channel->distributor = $request->distributor;
