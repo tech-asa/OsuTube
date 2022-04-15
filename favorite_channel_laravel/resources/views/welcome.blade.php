@@ -80,8 +80,14 @@
             <h4 class="modal-title">POST</h4>
             <p class="modal-subtitle">あなたの推しを周りの人と共有しよう！</p>
         </div>
-        <form class="categories" action="" method="POST">
+        <form class="categories" action="{{ route('channel.store') }}" method="POST">
             @csrf
+            @if (Route::has('login'))
+            @auth
+                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+            @endauth
+            @endif   
+            
             <div class="category">
                 <h5 class="channel-name">チャンネル投稿</h5>
             </div>

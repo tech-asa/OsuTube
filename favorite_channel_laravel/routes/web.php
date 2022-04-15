@@ -17,5 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 // Route::post('/', [App\Http\Controllers\ChannelController::class, 'home'])->name('home');
+// 表示用
+Route::get('/channel', [App\Http\Controllers\ChannelController::class, 'create'])->name('channel.create');
+// 投稿を押した時
+Route::post('/channel', [App\Http\Controllers\ChannelController::class, 'store'])->name('channel.store');
 
 Auth::routes();
