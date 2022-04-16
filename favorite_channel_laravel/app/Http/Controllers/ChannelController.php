@@ -36,7 +36,7 @@ class ChannelController extends Controller
      */
     public function create()
     {
-        return view('channels/channel');
+        return view('channels/edit_confirm');
     }
 
     /**
@@ -53,13 +53,13 @@ class ChannelController extends Controller
             $channel->name = $request->name;
             $channel->url = $request->url;
             $channel->genre = $request->genre;
-            $channel->streaming_method = $requestreaming_method;
-            $channel->streaming_method = $requestreaming_method;
+            $channel->streaming_method = $request->streaming_method;
             $channel->gender = $request->gender;
             $channel->voice = $request->voice;
             $channel->distributor = $request->distributor;
             $channel->comment = $request->comment;
             $channel->save();
+
             return redirect()->route('channel.create');
         }
     }

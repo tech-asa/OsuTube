@@ -18,11 +18,11 @@ class CreateChannelTable extends Migration
             $table->integer('user_id');
             $table->string('name');
             $table->string('url');
-            $table->integer('genre');
-            $table->integer('streaming_method');
-            $table->integer('gender');
-            $table->integer('voice');
-            $table->integer('distributor');
+            $table->string('genre')->nullable();
+            $table->string('streaming_method')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('voice')->nullable();
+            $table->string('distributor')->nullable();
             $table->text('comment')->nullable();
             $table->timestamps();
         });

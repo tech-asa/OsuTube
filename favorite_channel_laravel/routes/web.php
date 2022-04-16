@@ -17,11 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 // Route::post('/', [App\Http\Controllers\ChannelController::class, 'home'])->name('home');
-// 表示用
-Route::get('/channel', [App\Http\Controllers\ChannelController::class, 'create'])->name('channel.create');
-// 投稿を押した時
-Route::post('/channel', [App\Http\Controllers\ChannelController::class, 'store'])->name('channel.store');
-
 Route::get('/channel', [App\Http\Controllers\ChannelController::class, 'index'])->name('channel.index');
+// 表示用
+Route::get('/edit_confirm', [App\Http\Controllers\ChannelController::class, 'create'])->name('channel.create');
+// 投稿を押した時
+Route::post('/edit_confirm', [App\Http\Controllers\ChannelController::class, 'store'])->name('channel.store');
 
 Auth::routes();

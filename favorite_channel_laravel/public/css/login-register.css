@@ -92,3 +92,10 @@ main {
   font-size: 16px;
   width: 50%;
 }
+
+/* 投稿完了ボタン */
+.post-end {
+  padding: 30px;
+  font-size: 20px;
+  text-align: center;
+}

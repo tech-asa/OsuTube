@@ -18,54 +18,54 @@
             <div class="category">
                 <h5 class="category-title">ジャンル</h5>
                 <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="Genre" name="genre">
-                    <option value="0">-- 選択してください --</option>
-                    <option value="1">エンタメ</option>
-                    <option value="2">ビジネス・学び</option>
+                    <option value="">-- 指定無し --</option>
+                    <option value="エンタメ">エンタメ</option>
+                    <option value="ビジネス・学び">ビジネス・学び</option>
                 </select>
             </div>
             <div class="category">
                 <h5 class="category-title">主な投稿動画</h5>
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="streaming-method" name="streaming_method">
-                    <option value="0">-- 指定無し --</option>
-                    <option value="1">Live配信</option>
-                    <option value="2">編集動画</option>
-                    <option value="3">ショート動画</option>
-                    <option value="4">その他</option>
+                    <option value="">-- 指定無し --</option>
+                    <option value="Live配信">Live配信</option>
+                    <option value="編集動画">編集動画</option>
+                    <option value="ショート動画">ショート動画</option>
+                    <option value="その他">その他</option>
                 </select>
             </div>
             <div class="category">
                 <h5 class="category-title">性別</h5>
                 <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="gender" name="gender">
-                    <option value="0">-- 指定無し --</option>
-                    <option value="1">男性</option>
-                    <option value="2">女性</option>
-                    <option value="3">複数人</option>
-                    <option value="4">その他</option>
+                    <option value="">-- 指定無し --</option>
+                    <option value="男性">男性</option>
+                    <option value="女性">女性</option>
+                    <option value="複数人">複数人</option>
+                    <option value="その他">その他</option>
                 </select>
             </div>
             <div class="category">
                 <h5 class="category-title">声質</h5>
                 <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="voice" name="voice">
-                    <option value="0">-- 指定無し --</option>
-                    <option value="1">高め</option>
-                    <option value="2">普通</option>
-                    <option value="3">低め</option>
-                    <option value="4">機械音声(指定無し)</option>
-                    <option value="5">機械音声(高め)</option>
-                    <option value="6">機械音声(普通)</option>
-                    <option value="7">機械音声(低め)</option>
-                    <option value="8">その他</option>
+                    <option value="">-- 指定無し --</option>
+                    <option value="高め">高め</option>
+                    <option value="普通">普通</option>
+                    <option value="低め">低め</option>
+                    <option value="機械音声(指定無し)">機械音声(指定無し)</option>
+                    <option value="機械音声(高め)">機械音声(高め)</option>
+                    <option value="機械音声(普通)">機械音声(普通)</option>
+                    <option value="機械音声(低め)">機械音声(低め)</option>
+                    <option value="その他">その他</option>
                 </select>
             </div>
             <div class="category">
                 <h5 class="category-title">配信者情報</h5>
                 <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="distributor" name="distributor">
-                    <option value="0">-- 指定無し --</option>
-                    <option value="1">音声のみ</option>
-                    <option value="2">本人顔出し</option>
-                    <option value="3">2Dモデル</option>
-                    <option value="4">Vtuber</option>
-                    <option value="5">その他</option>
+                    <option value="">-- 指定無し --</option>
+                    <option value="音声のみ">音声のみ</option>
+                    <option value="本人顔出し">本人顔出し</option>
+                    <option value="2Dモデル">2Dモデル</option>
+                    <option value="Vtuber">Vtuber</option>
+                    <option value="その他">その他</option>
                 </select>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto search-buttom">
@@ -105,54 +105,54 @@
             <div class="category">
                 <h5 class="category-title">ジャンル</h5>
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="up-Genre" name="genre">
-                    <option value="0">-- 選択してください --</option>
-                    <option value="1">エンタメ</option>
-                    <option value="2">ビジネス・学び</option>
+                    <option value="">-- 選択してください --</option>
+                    <option value="エンタメ">エンタメ</option>
+                    <option value="ビジネス・学び">ビジネス・学び</option>
                 </select>
             </div>
             <div class="category">
                 <h5 class="category-title">主な投稿動画</h5>
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="up-streaming-method" name="streaming_method">
-                    <option value="0">-- 指定無し --</option>
-                    <option value="1">Live配信</option>
-                    <option value="2">編集動画</option>
-                    <option value="3">ショート動画</option>
-                    <option value="4">その他</option>
+                    <option value="">-- 指定無し --</option>
+                    <option value="Live配信">Live配信</option>
+                    <option value="編集動画">編集動画</option>
+                    <option value="ショート動画">ショート動画</option>
+                    <option value="その他">その他</option>
                 </select>
             </div>
             <div class="category">
                 <h5 class="category-title">性別</h5>
                 <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="up-gender" name="gender">
-                    <option value="0">-- 指定無し --</option>
-                    <option value="1">男性</option>
-                    <option value="2">女性</option>
-                    <option value="3">複数人</option>
-                    <option value="4">その他</option>
+                    <option value="">-- 指定無し --</option>
+                    <option value="男性">男性</option>
+                    <option value="女性">女性</option>
+                    <option value="複数人">複数人</option>
+                    <option value="その他">その他</option>
                 </select>
             </div>
             <div class="category">
                 <h5 class="category-title">声質</h5>
                 <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="up-voice" name="voice">
-                    <option value="0">-- 指定無し --</option>
-                    <option value="1">高め</option>
-                    <option value="2">普通</option>
-                    <option value="3">低め</option>
-                    <option value="4">機械音声(指定無し)</option>
-                    <option value="5">機械音声(高め)</option>
-                    <option value="6">機械音声(普通)</option>
-                    <option value="7">機械音声(低め)</option>
-                    <option value="8">その他</option>
+                    <option value="">-- 指定無し --</option>
+                    <option value="高め">高め</option>
+                    <option value="普通">普通</option>
+                    <option value="低め">低め</option>
+                    <option value="機械音声(指定無し)">機械音声(指定無し)</option>
+                    <option value="機械音声(高め)">機械音声(高め)</option>
+                    <option value="機械音声(普通)">機械音声(普通)</option>
+                    <option value="機械音声(低め)">機械音声(低め)</option>
+                    <option value="その他">その他</option>
                 </select>
             </div>
             <div class="category">
                 <h5 class="category-title">配信者情報</h5>
                 <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="up-distributor" name="distributor">
-                    <option value="0">-- 指定無し --</option>
-                    <option value="1">音声のみ</option>
-                    <option value="2">本人顔出し</option>
-                    <option value="3">2Dモデル</option>
-                    <option value="4">Vtuber</option>
-                    <option value="5">その他</option>
+                    <option value="">-- 指定無し --</option>
+                    <option value="音声のみ">音声のみ</option>
+                    <option value="本人顔出し">本人顔出し</option>
+                    <option value="2Dモデル">2Dモデル</option>
+                    <option value="Vtuber">Vtuber</option>
+                    <option value="その他">その他</option>
                 </select>
             </div>
 
