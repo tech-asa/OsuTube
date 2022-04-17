@@ -93,7 +93,7 @@
 
 /* モーダル全体 */
 #js-modal-background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -105,8 +105,9 @@
 
 .search-modal {
     background-color: white;
+    position: fixed;
     width:  50%;
-    height: 400px;
+    height: 450px;
     position: absolute;
     top:  0;                   
     bottom:  0;                 
@@ -116,12 +117,20 @@
     z-index: 100;
     border-radius: 10px;
     overflow: hidden scroll;
-    display: none;
     -ms-overflow-style: none;    /* IE, Edge 対応 */
     scrollbar-width: none;       /* Firefox 対応 */
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: bold;
     box-shadow: 0 0 8px yellow;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
 }
 
 .search-modal::-webkit-scrollbar {  /* Chrome, Safari 対応 */
@@ -137,7 +146,7 @@
 
 .search-modal .categories {
     width: 60%;
-    margin: 0 auto;    
+    margin: 15px auto;    
 }
 
 .search-modal .category h5 .search-buttom{
@@ -145,7 +154,10 @@
     margin-bottom: 20px;
 }
 
-/* 投稿モーダル */
+.search-modal .category {
+    margin-bottom: 15px;
+
+}/* 投稿モーダル */
 .up-modal .modal-header {
     background-color: rgb(61, 61, 255);
 }
@@ -171,13 +183,21 @@
     margin: auto;  
     z-index: 100;
     border-radius: 10px;
-    display: none;
     -ms-overflow-style: none;    /* IE, Edge 対応 */
     scrollbar-width: none;       /* Firefox 対応 */
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: bold;
     background-image: url(../img/header-background-image.jpg);
     background-size: cover;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
 }
 
 .introduction-modal::-webkit-scrollbar {  /* Chrome, Safari 対応 */

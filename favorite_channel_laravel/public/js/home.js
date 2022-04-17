@@ -8,14 +8,14 @@ class Modal {
 
         //モーダルコンテンツの表示
         getModal() {this.button.addEventListener('click', ()=>{
-            this.modal.style.display = "block";
+            this.modal.classList.add("active");
             this.modalBack.style.display = "block";
         });
     };
     
     //モーダルコンテンツ以外がクリックされた時
-    outModal() {this.modalBack.addEventListener('click',()=>{
-        this.modal.style.display = "none";
+    outModal() {this.modalBack.addEventListener('click', ()=>{
+        this.modal.classList.remove("active");
         this.modalBack.style.display = "none";
     });
 };
@@ -25,9 +25,9 @@ const search = new Modal('js-search', 'js-search-modal', 'js-modal-background');
 const up = new Modal('js-up', 'js-up-modal', 'js-modal-background');
 const introduction = new Modal('js-introduction', 'js-introduction-modal', 'js-modal-background');
 
-introduction.getModal();
-introduction.outModal();
 search.getModal();
 search.outModal();
+introduction.getModal();
+introduction.outModal();
 up.getModal();
 up.outModal();

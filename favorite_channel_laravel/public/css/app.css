@@ -38,6 +38,15 @@ header {
   font-size: 35px;
 }
 
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header a:hover {
+  color: black;
+}
+
 header span {
   background-color: red;
   color: white;

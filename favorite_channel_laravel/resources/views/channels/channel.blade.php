@@ -83,7 +83,7 @@
         @foreach ($channels as $channel)
         <div class="content">
             <div class="update-time">
-                <p>更新日時:<span>{{ $channel->updated_at }}</span></p>
+                <p>更新日時:<span>{{ \App\Helpers\helper::convert_to_fuzzy_time($channel->updated_at) }}</span></p>
             </div>
             <div class="edit-user">
                 <div class="edit-user-status">

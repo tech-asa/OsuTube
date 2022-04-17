@@ -1,6 +1,6 @@
 <header>
     <div class="header-contents">
-        <h1 class="header-title">Osu<span>Tube</span></h1>
+        <h1 class="header-title"><a href="/">Osu<span>Tube</span></a></h1>
         <!-- <p class="header-subtext"></p> -->
     </div>
     <div class="header-logout">
