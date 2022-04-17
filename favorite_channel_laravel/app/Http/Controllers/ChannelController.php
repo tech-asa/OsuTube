@@ -15,6 +15,7 @@ class ChannelController extends Controller
      */
     public function index(Request $request)
     {
+        //$request->input()で検索時に入力した項目を取得します。
         $genre = $request->input('genre');
         $streaming_method = $request->input('streaming_method');
         $gender = $request->input('gender');
@@ -24,10 +25,35 @@ class ChannelController extends Controller
  
         $query = Channel::query();
 
-        $channels = $query->get();
+        if ($genre != null) {
+            $query->where('genre', $genre)->get();
+        }
+
+        if ($streaming_method != null) {
+            $query->where('streaming', $streaming_method)->get();
+        }
+
+        if ($gender != null) {
+            $query->where('gender', $gender)->get();
+        }
+
+        if ($voice != null) {
+            $query->where('voice', $voice)->get();
+        }
+
+        if ($distributor != null) {
+            $query->where('distributor', $distributor)->get();
+        }
+
+        if ($comment != null) {
+            $query->where('comment', $comment)->get();
+        }
+
+        $channels = $query->paginate(20);
  
         return view('channels.channel', compact('channels'));   
     }
+
 
     /**
      * Show the form for creating a new resource.
