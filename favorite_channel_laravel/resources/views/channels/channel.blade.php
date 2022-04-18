@@ -100,7 +100,7 @@
                     <img src="img/youtube_image.jpg" alt="">
                 </div>
                 <div class="channel-status">
-                    <a href="https://www.youtube.com/channel/"{{ $channel->url }}>{{ $channel->name }}</a>
+                    <a href="https://www.youtube.com/channel/{{ $channel->url }}">{{ $channel->name }}</a>
                     <div class="categories">
                         <p class="genre-category"><span>ジャンル:</span>{{ $channel->genre }}</p>
                         <p class="streaming-method-category"><span>主な投稿動画:</span>{{ $channel->streaming_method }}</p>
