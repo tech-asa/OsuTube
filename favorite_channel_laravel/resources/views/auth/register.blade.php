@@ -11,8 +11,7 @@
             <div class="contents">
                 <div class="title">{{ __('新規登録画面') }}</div>
                     <div>
-                        <form method="POST" action="{{ route('register') }}">
-                            @csrf
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">                            @csrf
 
                             <div class="content">
                                 <label for="name" class="col-form-label text-md-end">{{ __('お名前') }}</label>
@@ -27,6 +26,19 @@
                                     @enderror
                                 </div>
                             </div>
+
+                            <div class="form-group row">
+                            <label for="avatar" class="col-md-4 col-form-label text-md-right">{{ __('プロフィール画像 (サイズは1024Kbyteまで）') }}</label>
+ 
+                            <div class="col-md-6">
+                                <input id="avatar" type="file" name="avatar" class="@error('avatar') is-invalid @enderror">
+                                @error('avatar')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
                             
                             <div class="content">
                                 <label for="nickname" class="col-form-label text-md-end">{{ __('ニックネーム') }}</label>
