@@ -50,6 +50,8 @@ class ChannelController extends Controller
         }
 
         $channels = $query->paginate(20);
+        //$nickname = $channels->user()->nickname;
+        //dd($channels->user);
  
         return view('channels.channel', compact('channels'));   
     }

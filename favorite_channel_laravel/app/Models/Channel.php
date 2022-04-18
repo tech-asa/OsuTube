@@ -18,4 +18,8 @@ class Channel extends Model
         'distributor',
         'comment'
     ];
+
+    Public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

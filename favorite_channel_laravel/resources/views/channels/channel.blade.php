@@ -87,10 +87,9 @@
             </div>
             <div class="edit-user">
                 <div class="edit-user-status">
-                    <img src="img/default_user_icon.png" alt="">
-                    <div class="edit-user-nickname">
-                        <p>ニックネーム</p>
-                    </div>
+                    <img src="{{asset('storage/images/'.$channel->user->avatar)}}" class="d-block rounded-circle mb-3">                    <div class="edit-user-nickname">
+                    <p>{{ $channel->user->nickname }}</p>
+                 </div>
                 </div>
                 <div class="balloon1-left">
                     <p>{{ $channel->comment }}</p>
