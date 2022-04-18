@@ -19,7 +19,7 @@
                                 <div>
                                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                     
-                                    @error('name')
+                                    @error('お名前')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -27,12 +27,12 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row">
-                            <label for="avatar" class="col-md-4 col-form-label text-md-right">{{ __('プロフィール画像 (サイズは1024Kbyteまで）') }}</label>
+                            <div class="content">
+                            <label for="avatar" class="col-form-label text-md-right">{{ __('プロフィール画像') }}<p> (サイズは1024Kbyteまで）</p></label>
  
                             <div class="col-md-6">
                                 <input id="avatar" type="file" name="avatar" class="@error('avatar') is-invalid @enderror">
-                                @error('avatar')
+                                @error('プロフィール画像')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -46,7 +46,7 @@
                                 <div>
                                     <input id="nickname" type="text" class="form-control @error('nickname') is-invalid @enderror" name="nickname" value="{{ old('nickname') }}" required autocomplete="nickname" autofocus>
                                     
-                                    @error('nickname')
+                                    @error('ニックネーム')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -60,7 +60,7 @@
                                 <div>
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                                     
-                                    @error('email')
+                                    @error('メールアドレス')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -74,7 +74,7 @@
                                 <div>
                                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                                     
-                                    @error('password')
+                                    @error('パスワード')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
