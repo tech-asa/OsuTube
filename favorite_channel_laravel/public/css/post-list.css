@@ -25,7 +25,8 @@ main {
 }
 
 .contents .content {
-    margin: 0 15%;
+    margin: 0;
+    width: 100%;
     padding-top: 30px;
     padding-bottom: 10px;
     border-top: 1px solid rgb(200, 200, 200);
@@ -36,6 +37,15 @@ main {
 
 .contents .content:last-child {
     border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.main-content {
+    display: flex;
+}
+
+.sidebar {
+    display: flexbox;
+    width: 25%;
 }
 
 .edit-user {
