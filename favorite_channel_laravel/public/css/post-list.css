@@ -24,9 +24,12 @@ main {
     color: gray;
 }
 
-.contents .content {
-    margin: 0;
+.contents .channel-content {
     width: 100%;
+}
+
+.contents .channel-content .content {
+    margin: 0;
     padding-top: 30px;
     padding-bottom: 10px;
     border-top: 1px solid rgb(200, 200, 200);
@@ -46,6 +49,20 @@ main {
 .sidebar {
     display: flexbox;
     width: 25%;
+}
+
+.sidebar-menus {
+}
+
+.sidebar-menus  .sidebar-menu{
+    border-bottom: 1px solid rgb(169, 169, 169);
+}
+
+.sidebar-menus  .sidebar-menu p {
+    line-height: 3rem;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
 }
 
 .edit-user {

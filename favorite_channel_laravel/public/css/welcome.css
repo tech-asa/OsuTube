@@ -170,6 +170,10 @@
     font-size: 14px;
 }
 
+form span {
+    color: red;
+}
+
 /* 紹介モーダル */
 .introduction-modal {
     background-color: white;

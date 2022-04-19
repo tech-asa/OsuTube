@@ -83,47 +83,65 @@
 
         <div class="main-content">
             <div class="sidebar">
-                <h1>aaaaaa</h1>
+                <div class="sidebar-menus">
+                    <div class="sidebar-menu">
+                        <p class="menu-text">-- ホーム --</p>
+                    </div>
+                    <div class="sidebar-menu">
+                        <p class="menu-text">-- マイページ --</p>
+                    </div>
+                    <div class="sidebar-menu">
+                        <p class="menu-text">-- 新規登録 --</p>
+                    </div>
+                    <div class="sidebar-menu">
+                        <p class="menu-text">-- ログイン --</p>
+                    </div>
+                    <div class="sidebar-menu">
+                        <p class="menu-text">-- 投稿機能 --</p>
+                    </div>
+                </div>
             </div>
+            <div class="channel-content">
             @foreach ($channels as $channel)
-            <div class="content">
-                <div class="update-time">
-                    <p>更新日時:<span>{{ \App\Helpers\helper::convert_to_fuzzy_time($channel->updated_at) }}</span></p>
-                </div>
-                <div class="edit-user">
-                    <div class="edit-user-status">
-                        <img src="{{asset('storage/images/'.$channel->user->avatar)}}" class="d-block rounded-circle mb-3">                    <div class="edit-user-nickname">
-                            <p>{{ $channel->user->nickname }}</p>
+                <div class="content">
+                    <div class="update-time">
+                        <p>更新日時:<span>{{ \App\Helpers\helper::convert_to_fuzzy_time($channel->updated_at) }}</span></p>
+                    </div>
+                    <div class="edit-user">
+                        <div class="edit-user-status">
+                            <img src="{{asset('storage/images/'.$channel->user->avatar)}}" class="d-block rounded-circle mb-3">                    <div class="edit-user-nickname">
+                                <p>{{ $channel->user->nickname }}</p>
+                            </div>
+                        </div>
+                        <div class="balloon1-left">
+                            <p>{{ $channel->comment }}</p>
                         </div>
                     </div>
-                    <div class="balloon1-left">
-                        <p>{{ $channel->comment }}</p>
-                    </div>
-                </div>
-                <div class="bg-red oblique-gloss solid-shadow channel">
-                    <div class="channel-image">
-                        <img src="img/youtube_image.jpg" alt="">
-                    </div>
-                    <div class="channel-status">
-                        <a href="https://www.youtube.com/channel/{{ $channel->url }}">{{ $channel->name }}</a>
-                        <div class="categories">
-                            <p class="genre-category"><span>ジャンル:</span>{{ $channel->genre }}</p>
-                            <p class="streaming-method-category"><span>主な投稿動画:</span>{{ $channel->streaming_method }}</p>
-                            <p class="gender-category"><span>性別:</span>{{ $channel->gender }}</p>
-                            <p class="voice-category"><span>声質:</span>{{ $channel->voice }}</p>
-                            <p class="distributor-category"><span>配信者情報:</span>{{ $channel->distributor }}</p>
+                    <div class="bg-red oblique-gloss solid-shadow channel">
+                        <div class="channel-image">
+                            <img src="img/youtube_image.jpg" alt="">
+                        </div>
+                        <div class="channel-status">
+                            <a href="https://www.youtube.com/channel/{{ $channel->url }}">{{ $channel->name }}</a>
+                            <div class="categories">
+                                <p class="genre-category"><span>ジャンル:</span>{{ $channel->genre }}</p>
+                                <p class="streaming-method-category"><span>主な投稿動画:</span>{{ $channel->streaming_method }}</p>
+                                <p class="gender-category"><span>性別:</span>{{ $channel->gender }}</p>
+                                <p class="voice-category"><span>声質:</span>{{ $channel->voice }}</p>
+                                <p class="distributor-category"><span>配信者情報:</span>{{ $channel->distributor }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="report">
-                    <a href=""></a>
-                    <button type="button" class="btn btn-outline-danger">通報する</button>
-                </div>
-            </div>  
-            @endforeach  
+                    <div class="report">
+                        <a href=""></a>
+                        <button type="button" class="btn btn-outline-danger">通報する</button>
+                    </div>
+                </div>  
+                @endforeach  
+            </div>
         </div>
     </div>
 </main>
-    <!-- Scripts -->
-    <script src="{{ asset('js/channel.js') }}"></script>
+<!-- Scripts -->
+<script src="{{ asset('js/channel.js') }}"></script>
 @endsection

@@ -64,7 +64,7 @@ class ChannelController extends Controller
     {
         return view('channels/edit_confirm');
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *
@@ -73,7 +73,19 @@ class ChannelController extends Controller
      */
     public function store(Request $request)
     {
-        {
+        {   
+            $rules = [
+                'name' => ['required', 'string'],
+                'url' => ['required', 'string'],
+                'genre' => ['required', 'string'],
+                'streaming_method' => ['required', 'string'],
+                'gender' => ['required', 'string'],
+                'voice' => ['required', 'string'],
+                'distributor' => ['required', 'string'],
+            ];
+            
+            $this->validate($request, $rules);
+
             $channel = new Channel;
             $channel->user_id = $request->user_id;
             $channel->name = $request->name;
@@ -85,6 +97,8 @@ class ChannelController extends Controller
             $channel->distributor = $request->distributor;
             $channel->comment = $request->comment;
             $channel->save();
+
+
 
             return redirect()->route('channel.create');
         }

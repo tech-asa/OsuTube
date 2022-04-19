@@ -28,7 +28,7 @@
                             </div>
 
                             <div class="content">
-                            <label for="avatar" class="col-form-label text-md-right">{{ __('プロフィール画像') }}<p> (サイズは1024Kbyteまで）</p></label>
+                            <div for="avatar" class="col-form-label text-md-right">{{ __('プロフィール画像') }}<p> (サイズは1024Kbyteまで）</p></div>
  
                             <div class="col-md-6">
                                 <input id="avatar" type="file" name="avatar" class="@error('avatar') is-invalid @enderror">
