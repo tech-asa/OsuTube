@@ -117,7 +117,7 @@
             <div class="category">
                 <h5 class="category-title">ジャンル</h5>
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="up-Genre" name="genre">
-                    <option value="">-- 選択してください --</option>
+                    <option value="">-- 指定無し --</option>
                     <option value="エンタメ">エンタメ</option>
                     <option value="ビジネス・学び">ビジネス・学び</option>
                 </select>

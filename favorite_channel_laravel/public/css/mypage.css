@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+
+body {
+    box-sizing: border-box;
+    background-image: url(../img/baskground-colorful.png);
+    background-size: cover;
+}
+
+main {
+    margin: 100px auto 0;
+    width: 80%;
+    background-color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    border-radius: 10px;
+}
+
+.mypage-title {
+    display: block;
+    padding: 20px 0;
+    width: 100%;
+    background-color: rgb(79, 79, 255);
+    color: white;
+    text-align: center;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.infomations {
+    display: flex;
+    height: 100%;
+
+}
+
+.user-infomations {
+    width: 30%;
+    border-right: 1px solid black;
+
+}
+
+.user-infomations .title {
+    text-align: center;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.register-contents .edit-button {
+    width: 50%;
+    margin: 0 auto 20px;
+}
+
+.register-contents button {
+    width: 100%;
+}
+
+.register-contents {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.register-contents .user-image {
+    width: 30%;
+    margin: 0 auto 20px;
+}
+
+.register-contents img{
+    border-radius: 50%;
+    width: 100%;
+}
+
+.register-content h5 {
+    background-color: gray;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.register-content p{
+    padding: 0 0 10px;
+    margin: 0;
+}
+
+.channel-infomations {
+    width: 70%;
+}
+
+.content {
+    border-bottom: 1px solid gray;
+    padding: 0 0 20px;
+}
+
+.channel {
+    display: flex;
+    width: 80%;
+    margin: 15px auto 15px;
+    padding: 15px;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 20px;
+    align-items: center;
+    color: white;
+    background-color: rgb(0, 174, 255);
+    background-image: -webkit-linear-gradient(45deg,transparent 40%,rgba(255,255,255,.3) 40%,rgba(255,255,255,.3) 60%,transparent 60%);
+    background-image:         linear-gradient(45deg,transparent 40%,rgba(255,255,255,.3) 40%,rgba(255,255,255,.3) 60%,transparent 60%);
+    background-repeat: no-repeat;
+    border-bottom: 5px solid rgba(0,0,0,.4);
+}
+
+.content .update-time {
+    text-align: right;
+    padding: 10px 10px 0 0;
+}
+
+.user-comment {
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
+}
+
+.content .comment {
+    background-color: gray;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.content .channel .channel-status {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.content .channel .channel-status a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.content .channel .channel-status .categories {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.content .channel .channel-status .categories p {
+    margin-right: 20px;
+}
+
+.content .channel .channel-status .categories span {
+    font-size: 12px;
+}
+
+.content .report {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.content .report button {
+    font-size: 12px;
+}
+
+.content .report button:hover {
+    cursor: pointer;
+}

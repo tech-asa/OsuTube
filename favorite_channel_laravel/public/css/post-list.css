@@ -13,6 +13,7 @@ main {
 
 .contents {
     margin: 0 auto;
+    padding-bottom: 20px;
     width: 90%;
     background-color: rgb(255, 255, 255);
 }
@@ -47,14 +48,21 @@ main {
 }
 
 .sidebar {
-    display: flexbox;
     width: 25%;
 }
 
 .sidebar-menus {
+    position: sticky;
+    margin-bottom: 0;
+    top: 90px;
+    z-index: 1;
 }
 
 .sidebar-menus  .sidebar-menu{
+    border-top: 1px solid rgb(169, 169, 169);
+}
+
+.sidebar-menus  .sidebar-menu:last-child{
     border-bottom: 1px solid rgb(169, 169, 169);
 }
 

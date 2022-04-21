@@ -83,7 +83,7 @@ class ChannelController extends Controller
                 'voice' => ['required', 'string'],
                 'distributor' => ['required', 'string'],
             ];
-            
+
             $this->validate($request, $rules);
 
             $channel = new Channel;
@@ -97,8 +97,6 @@ class ChannelController extends Controller
             $channel->distributor = $request->distributor;
             $channel->comment = $request->comment;
             $channel->save();
-
-
 
             return redirect()->route('channel.create');
         }
