@@ -17,18 +17,18 @@
                     </div>
                     <div class="register-content">
                         <h5>お名前</h5>
-                        <p>ユーザー</p>
+                        <p>{{ $auth->name }}</p>
                     </div>
                     <div class="register-content">
                         <h5>ニックネーム</h5>
-                        <p>ユーザー</p>
+                        <p>{{ $auth->nickname }}</p>
                     </div>
                     <div class="register-content">
                         <h5>メールアドレス</h5>
-                        <p>ユーザー</p>
+                        <p>{{ $auth->email }}</p>
                     </div>
                     <div class="edit-button">
-                        <button type="button" class="btn btn-outline-primary">編集</button>
+                        <a href="{{ action('Admin\UserController@edit') }}"></a><button type="button" class="btn btn-outline-primary">編集</button>
                     </div>
                 </div>
             </div>
