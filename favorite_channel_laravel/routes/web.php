@@ -17,10 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/mypage', function () {
-    return view('channels.mypage');
-});
-
 // Route::post('/', [App\Http\Controllers\ChannelController::class, 'home'])->name('home');
 Route::get('/channel', [App\Http\Controllers\ChannelController::class, 'index'])->name('channel.index');
 // 表示用
@@ -28,6 +24,7 @@ Route::get('/edit_confirm', [App\Http\Controllers\ChannelController::class, 'cre
 // 投稿を押した時
 Route::post('/edit_confirm', [App\Http\Controllers\ChannelController::class, 'store'])->name('channel.store');
 
-// Route::get('/mypage{id}', [App\Http\Controllers\ChannelController::class, 'index'])->name('channel.index');
+Route::get('/mypage', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('user.index');
+Route::get('/mypage_edit', [App\Http\Controllers\Admin\UserController::class, 'edit'])->name('user.edit');
 
 Auth::routes();

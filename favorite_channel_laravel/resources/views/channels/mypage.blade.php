@@ -28,7 +28,7 @@
                         <p>{{ $auth->email }}</p>
                     </div>
                     <div class="edit-button">
-                        <a href="{{ action('Admin\UserController@edit') }}"></a><button type="button" class="btn btn-outline-primary">編集</button>
+                        <a href="{{ route('user.edit') }}"></a><button type="button" class="btn btn-outline-primary">編集</button>
                     </div>
                 </div>
             </div>
@@ -52,11 +52,11 @@
                             <div class="channel-status">
                                 <a href="">チャンネル名</a>
                                 <div class="categories">
-                                    <p class="genre-category"><span>ジャンル:</span>ジャンル</p>
-                                    <p class="streaming-method-category"><span>主な投稿動画:</span>配信</p>
-                                    <p class="gender-category"><span>性別:</span>性別</p>
-                                    <p class="voice-category"><span>声質:</span>声</p>
-                                    <p class="distributor-category"><span>配信者情報:</span>配信者</p>
+                                    <p class="genre-category"><span>ジャンル: </span>ジャンル</p>
+                                    <p class="streaming-method-category"><span>主な投稿動画: </span>配信</p>
+                                    <p class="gender-category"><span>性別: </span>性別</p>
+                                    <p class="voice-category"><span>声質: </span>声</p>
+                                    <p class="distributor-category"><span>配信者情報: </span>配信者</p>
                                 </div>
                             </div>
                         </div>

@@ -17,7 +17,8 @@ class UserController extends Controller
     {
         $auth = Auth::user();
 
-        return view('user.index',[ 'auth' => $auth ]);
+
+        return view('channels.mypage',[ 'auth' => $auth ]);
     }
 
     /**
