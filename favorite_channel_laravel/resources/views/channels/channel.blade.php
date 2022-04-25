@@ -119,7 +119,15 @@
                     </div>
                     <div class="bg-red oblique-gloss solid-shadow channel">
                         <div class="channel-image">
-                            <img src="img/youtube_image.jpg" alt="">
+                            @if ($channel->gender === '男性')
+                            <img src="img/man.png" alt="">
+                            @elseif ($channel->gender === '女性')
+                            <img src="img/woman.png" alt="">
+                            @elseif ($channel->gender === '複数人')
+                            <img src="img/many.png" alt="">
+                            @else ($channel->gender === 'その他')
+                            <img src="img/other.png" alt="">
+                            @endif
                         </div>
                         <div class="channel-status">
                             <a href="https://www.youtube.com/channel/{{ $channel->url }}">{{ $channel->name }}</a>

@@ -11,6 +11,11 @@ main {
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
+.main-content {
+    display: flex;
+}
+
+/* チャンネル全体 */
 .contents {
     margin: 0 auto;
     padding-bottom: 20px;
@@ -36,17 +41,14 @@ main {
     border-top: 1px solid rgb(200, 200, 200);
     border-left: 1px solid rgb(200, 200, 200);
     border-right: 1px solid rgb(200, 200, 200);
-    background-color: rgb(255, 236, 226);
+    background-color: rgb(235, 235, 235);
 }
 
 .contents .content:last-child {
     border-bottom: 1px solid rgb(200, 200, 200);
 }
 
-.main-content {
-    display: flex;
-}
-
+/* サイドバー */
 .sidebar {
     width: 25%;
 }
@@ -73,6 +75,7 @@ main {
     margin: 0;
 }
 
+/* 投稿ユーザー部分 */
 .edit-user {
     display: flex;
     width: 90%;
@@ -126,6 +129,7 @@ main {
     padding: 0;
 }
 
+/* 投稿させたチャンネル */
 .channel {
     display: flex;
     width: 80%;
@@ -135,7 +139,7 @@ main {
     border-radius: 20px;
     align-items: center;
     color: white;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(55, 182, 0);
     background-image: -webkit-linear-gradient(45deg,transparent 40%,rgba(255,255,255,.3) 40%,rgba(255,255,255,.3) 60%,transparent 60%);
     background-image:         linear-gradient(45deg,transparent 40%,rgba(255,255,255,.3) 40%,rgba(255,255,255,.3) 60%,transparent 60%);
     background-repeat: no-repeat;
@@ -153,6 +157,7 @@ main {
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid rgb(255, 255, 255);
+    background-color: white;
 }
 
 .content .channel .channel-status {
@@ -193,6 +198,7 @@ main {
     cursor: pointer;
 }
  
+/* 検索ヘッダー部分 */
 .search-header {
     text-align: center;
     padding: 30px 0;
