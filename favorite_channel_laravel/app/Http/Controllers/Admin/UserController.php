@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Channel;
 
 class UserController extends Controller
 {
@@ -16,9 +17,11 @@ class UserController extends Controller
     public function index()
     {
         $auth = Auth::user();
+        $auth_id = Auth::id();
+        
+        $channels = Channel::where('user_id', '=', $auth_id)->get();
 
-
-        return view('channels.mypage',[ 'auth' => $auth ]);
+        return view('channels.mypage',[ 'auth' => $auth ],[ 'channels' => $channels ]);
     }
 
     /**

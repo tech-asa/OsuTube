@@ -35,28 +35,37 @@
             
             <div class="channel-infomations">
                 <div class="channel-content">
+                @foreach ($channels as $channel)
                     <div class="content">
                         <div class="update-time">
-                            <p>更新日時:<span></span></p>
+                            <p>更新日時:<span>{{ \App\Helpers\helper::convert_to_fuzzy_time($channel->updated_at) }}</span></p>
                         </div>
                         <p class="user-comment">あなたのコメント</p>
                         <div class="edit-user">
                             <div class="comment">
-                                <p>あああああああああああああああああああああああああああああああああああああああああああああああ</p>
+                                <p>{{ $channel->comment }}</p>
                             </div>
                         </div>
                         <div class="bg-red oblique-gloss solid-shadow channel">
-                            <div class="channel-image">
-                                <img src="" alt="">
-                            </div>
+                        <div class="channel-image">
+                            @if ($channel->gender === '男性')
+                            <img src="img/man.png" alt="">
+                            @elseif ($channel->gender === '女性')
+                            <img src="img/woman.png" alt="">
+                            @elseif ($channel->gender === '複数人')
+                            <img src="img/many.png" alt="">
+                            @else ($channel->gender === 'その他')
+                            <img src="img/other.png" alt="">
+                            @endif
+                        </div>
                             <div class="channel-status">
-                                <a href="">チャンネル名</a>
+                                <a href="https://www.youtube.com/channel/{{ $channel->url }}">{{ $channel->name }}</a>
                                 <div class="categories">
-                                    <p class="genre-category"><span>ジャンル: </span>ジャンル</p>
-                                    <p class="streaming-method-category"><span>主な投稿動画: </span>配信</p>
-                                    <p class="gender-category"><span>性別: </span>性別</p>
-                                    <p class="voice-category"><span>声質: </span>声</p>
-                                    <p class="distributor-category"><span>配信者情報: </span>配信者</p>
+                                    <p class="genre-category"><span>ジャンル: </span>{{ $channel->genre }}</p>
+                                    <p class="streaming-method-category"><span>主な投稿動画: </span>{{ $channel->streaming_method }}</p>
+                                    <p class="gender-category"><span>性別: </span>{{ $channel->gender }}</p>
+                                    <p class="voice-category"><span>声質: </span>{{ $channel->voice }}</p>
+                                    <p class="distributor-category"><span>配信者情報: </span>{{ $channel->distributor }}</p>
                                 </div>
                             </div>
                         </div>
@@ -65,6 +74,7 @@
                             <button type="button" class="btn btn-outline-primary">編集する</button>
                         </div>
                     </div>  
+                @endforeach  
                 </div>
             </div>
                 

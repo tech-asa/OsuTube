@@ -129,7 +129,7 @@ main {
     padding: 0;
 }
 
-/* 投稿させたチャンネル */
+/* 投稿されたチャンネル */
 .channel {
     display: flex;
     width: 80%;
