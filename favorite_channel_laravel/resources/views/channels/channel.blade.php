@@ -132,11 +132,11 @@
                         <div class="channel-status">
                             <a href="https://www.youtube.com/channel/{{ $channel->url }}">{{ $channel->name }}</a>
                             <div class="categories">
-                                <p class="genre-category"><span>ジャンル:</span>{{ $channel->genre }}</p>
-                                <p class="streaming-method-category"><span>主な投稿動画:</span>{{ $channel->streaming_method }}</p>
-                                <p class="gender-category"><span>性別:</span>{{ $channel->gender }}</p>
-                                <p class="voice-category"><span>声質:</span>{{ $channel->voice }}</p>
-                                <p class="distributor-category"><span>配信者情報:</span>{{ $channel->distributor }}</p>
+                                <p class="genre-category"><span>ジャンル: </span>{{ $channel->genre }}</p>
+                                <p class="streaming-method-category"><span>主な投稿動画: </span>{{ $channel->streaming_method }}</p>
+                                <p class="gender-category"><span>性別: </span>{{ $channel->gender }}</p>
+                                <p class="voice-category"><span>声質: </span>{{ $channel->voice }}</p>
+                                <p class="distributor-category"><span>配信者情報: </span>{{ $channel->distributor }}</p>
                             </div>
                         </div>
                     </div>
