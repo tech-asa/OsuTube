@@ -18,7 +18,6 @@ class UserController extends Controller
     {
         $auth = Auth::user();
         $auth_id = Auth::id();
-        
         $channels = Channel::where('user_id', '=', $auth_id)->get();
 
         return view('channels.mypage',[ 'auth' => $auth ],[ 'channels' => $channels ]);

@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
-
+/* 全体 */
 body {
     box-sizing: border-box;
     background-image: url(../img/baskground-colorful.png);
     background-size: cover;
 }
 
+/* メイン全体 */
 main {
     margin: 100px auto 0;
     width: 80%;
@@ -14,6 +15,7 @@ main {
     border-radius: 10px;
 }
 
+/* マイページタイトル */
 .mypage-title {
     display: block;
     padding: 20px 0;
@@ -25,10 +27,10 @@ main {
     border-radius: 10px 10px 0 0;
 }
 
+/* ユーザー情報 */
 .infomations {
     display: flex;
     height: 100%;
-
 }
 
 .user-infomations {
@@ -80,6 +82,7 @@ main {
     margin: 0;
 }
 
+/* チャンネル情報 */
 .channel-infomations {
     width: 70%;
 }

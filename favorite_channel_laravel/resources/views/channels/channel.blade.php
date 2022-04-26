@@ -21,6 +21,24 @@
                     <option value="">-- 指定無し --</option>
                     <option value="エンタメ">エンタメ</option>
                     <option value="ビジネス・学び">ビジネス・学び</option>
+                    <option value="バラエティ">バラエティ</option>
+                    <option value="商品紹介・レビュー">商品紹介・レビュー</option>
+                    <option value="ゲーム実況">ゲーム実況</option>
+                    <option value="料理・レシピ">料理・レシピ</option>
+                    <option value="メイク・ファッション">メイク・ファッション</option>
+                    <option value="ハウツー・雑学">ハウツー・雑学</option>
+                    <option value="健康・フィットネス">健康・フィットネス</option>
+                    <option value="アウトドア">アウトドア</option>
+                    <option value="夫婦・カップル">夫婦・カップル</option>
+                    <option value="ペット・生き物">ペット・生き物</option>
+                    <option value="音楽">音楽</option>
+                    <option value="ギャンブル・娯楽">ギャンブル・娯楽</option>
+                    <option value="Vtuber">Vtuber</option>
+                    <option value="大食い">大食い</option>
+                    <option value="ラジオ">ラジオ</option>
+                    <option value="ブログ">ブログ</option>
+                    <option value="BGM">BGM</option>
+                    <option value="その他">その他</option>
                 </select>
             </div>
             <div class="category">
