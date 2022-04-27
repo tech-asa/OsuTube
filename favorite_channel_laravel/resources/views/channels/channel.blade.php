@@ -92,33 +92,47 @@
         </form>
     </div>
 
+    <!-- メイン部分 -->
     <div class="contents">
         <div class="search-header">
             <h5 class="search-result-text">検索結果</h5>
+            @if(!isset($channels[0]))
+            <h4>条件に当てはまる投稿がありませんでした。</h4>
+            <p>お手数ですが検索条件を変更の上、再度検索ください。</p>
+            @else
             <p>以下の配信者の方が条件にヒットしました。</p>
+            @endif
             <button id="js-search" type="button" class="btn btn-success">条件を変えてもう一度検索</button>
         </div>
 
         <div class="main-content">
-            <div class="sidebar">
-                <div class="sidebar-menus">
-                    <div class="sidebar-menu">
-                        <p class="menu-text">-- ホーム --</p>
+
+            <!-- サイドバー -->
+            @if (Route::has('login'))
+            @auth
+            <div class="user-infomations">
+                <div class="register-contents">
+                    <h4 class="title">ユーザー情報</h4>
+                    <div class="user-image">
+                        <img src="../img/default_user_icon.png" alt="">
                     </div>
-                    <div class="sidebar-menu">
-                        <p class="menu-text">-- マイページ --</p>
+                    <div class="register-content">
+                        <h5>ニックネーム</h5>
+                        <p>{{ $auth->nickname }}</p>
                     </div>
-                    <div class="sidebar-menu">
-                        <p class="menu-text">-- 新規登録 --</p>
+                    <div class="register-content">
+                        <h5>これまでの投稿件数</h5>
+                        <p>{{ $channel_count }}件</p>
                     </div>
-                    <div class="sidebar-menu">
-                        <p class="menu-text">-- ログイン --</p>
-                    </div>
-                    <div class="sidebar-menu">
-                        <p class="menu-text">-- 投稿機能 --</p>
+                    <div class="edit-button">
+                        <a href="{{ route('user.index') }}"><button type="button" class="btn btn-outline-primary">マイページ</button></a>
                     </div>
                 </div>
             </div>
+            @endauth
+            @endif    
+
+            <!-- チャンネル一覧部分 -->
             <div class="channel-content">
             @foreach ($channels as $channel)
                 <div class="content">
@@ -163,7 +177,7 @@
                         <button type="button" class="btn btn-outline-danger">通報する</button>
                     </div>
                 </div>  
-                @endforeach  
+                @endforeach
             </div>
         </div>
     </div>

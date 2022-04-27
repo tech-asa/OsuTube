@@ -18,7 +18,7 @@ main {
 /* チャンネル全体 */
 .contents {
     margin: 0 auto;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
     width: 90%;
     background-color: rgb(255, 255, 255);
 }
@@ -49,31 +49,66 @@ main {
 }
 
 /* サイドバー */
-.sidebar {
-    width: 25%;
+.user-infomations {
+    width: 30%;
+    height: 100%;
+    border-right: 1px solid black;
+    background-color: rgb(255, 255, 255);
 }
 
-.sidebar-menus {
+.user-infomations .title {
+    text-align: center;
+    padding: 0;
+    margin: 20px 0 10px;
+    border-bottom: 1px dotted black;
+}
+
+.register-contents .edit-button {
+    width: 50%;
+    margin: 0 auto 20px;
+}
+
+.register-contents button {
+    width: 100%;
+}
+
+.register-contents {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.register-contents .user-image {
+    width: 30%;
+    margin: 0 auto 20px;
+    border: 2px solid gray;
+    border-radius: 50%;
+}
+
+.register-contents img{
+    border-radius: 50%;
+    width: 100%;
+}
+
+.register-content h5 {
+    background-color: rgb(52, 133, 255);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.register-content p{
+    padding: 0 0 10px;
+    margin: 0;
+    text-align: center;
+}
+
+.register-contents {
     position: sticky;
     margin-bottom: 0;
-    top: 90px;
+    top: 100px;
     z-index: 1;
-}
-
-.sidebar-menus  .sidebar-menu{
-    border-top: 1px solid rgb(169, 169, 169);
-}
-
-.sidebar-menus  .sidebar-menu:last-child{
-    border-bottom: 1px solid rgb(169, 169, 169);
-}
-
-.sidebar-menus  .sidebar-menu p {
-    line-height: 3rem;
-    font-size: 18px;
-    text-align: center;
-    margin: 0;
-}
+  }
 
 /* 投稿ユーザー部分 */
 .edit-user {

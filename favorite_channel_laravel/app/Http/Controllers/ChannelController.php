@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Channel;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class ChannelController extends Controller
 {
@@ -50,8 +52,12 @@ class ChannelController extends Controller
         }
 
         $channels = $query->paginate(20);
- 
-        return view('channels.channel', compact('channels'));   
+        $auth = Auth::user();
+        $auth_id = Auth::id();
+
+        $channel_count = Channel::where('user_id', '=', $auth_id)->get()->count();
+        
+        return view('channels.channel', compact('channels','auth','channel_count'));   
     }
 
 

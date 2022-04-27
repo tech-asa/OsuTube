@@ -220,7 +220,7 @@
     <!-- サイト紹介モーダル -->
     <div class="introduction-modal" id="js-introduction-modal">
         <div class="introduction-text-box">
-            <p class="introduction-text">当サイトは<br>未来を紡ぐ、金の卵な配信者を
+            <p class="introduction-text">当サイトは<br>あなたのオススメ配信者を
                 <br>周りと簡単に共有でき、検索できる配信者応援サイトです。<br>あなたが応援したい配信者の方を投稿してみましょう！
             </p>
         </div>
