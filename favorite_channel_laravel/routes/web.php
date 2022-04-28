@@ -26,5 +26,6 @@ Route::post('/edit_confirm', [App\Http\Controllers\ChannelController::class, 'st
 
 Route::get('/mypage', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('user.index');
 Route::get('/mypage_edit', [App\Http\Controllers\Admin\UserController::class, 'edit'])->name('user.edit');
+Route::post('/mypage_edit', [App\Http\Controllers\Admin\UserController::class, 'update'])->name('user.update');
 
 Auth::routes();

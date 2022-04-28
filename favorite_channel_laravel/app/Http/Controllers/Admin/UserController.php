@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Channel;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -17,7 +18,7 @@ class UserController extends Controller
     public function index()
     {
         $auth = Auth::user();
-        $auth_id = Auth::id();
+        $auth_id = Auth::user()->id;
         $channels = Channel::where('user_id', '=', $auth_id)->get();
 
         return view('channels.mypage',[ 'auth' => $auth ],[ 'channels' => $channels ]);
@@ -61,11 +62,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
         $auth = Auth::user();
 
-        return view('user.edit',[ 'auth' => $auth ]);    
+        return view('channels.register_edit',[ 'auth' => $auth ]);    
     }
 
     /**
@@ -75,11 +76,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         // 対象レコード取得
 
-        $auth = User::find($id);
+        $auth = Auth::user();
 
         // リクエストデータ受取
 
@@ -93,7 +94,7 @@ class UserController extends Controller
 
         $auth->fill($form)->save();
 
-        return redirect('/user');   
+        return redirect()->route('user.edit')->with('flash_message', '投稿が完了しました');
     }
 
     /**

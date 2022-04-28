@@ -28,7 +28,7 @@
                         <p>{{ $auth->email }}</p>
                     </div>
                     <div class="edit-button">
-                        <a href="{{ route('user.edit') }}"></a><button type="button" class="btn btn-outline-primary">編集</button>
+                        <a href="{{ route('user.edit') }}"><button type="button" class="btn btn-outline-primary">編集</button></a>
                     </div>
                 </div>
             </div>
@@ -77,8 +77,8 @@
                 @endforeach  
                 </div>
             </div>
-                
         </div>
     </section>
+
 </main>
 @endsection

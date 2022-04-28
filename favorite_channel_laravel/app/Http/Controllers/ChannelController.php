@@ -87,7 +87,7 @@ class ChannelController extends Controller
              [
                     'name.required' => 'チャンネル名は必須項目です。',
                     'url.required'  => 'チャンネルURLは必須項目です。',
-                    'comment.required'  => 'コメント欄は必須項目です。',
+                    'comment.required'  => 'コメント欄は必須項目(100文字以内)です。',
              ]);
 
             $channel = new Channel;
