@@ -135,7 +135,7 @@
             <div class="category">
                 <h5 class="category-title">ジャンル</h5>
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="up-Genre" name="genre">
-                    <option value="">-- 指定無し --</option>
+                    <option value="指定無し">-- 指定無し --</option>
                     <option value="エンタメ">エンタメ</option>
                     <option value="ビジネス・学び">ビジネス・学び</option>
                     <option value="バラエティ">バラエティ</option>
@@ -161,7 +161,7 @@
             <div class="category">
                 <h5 class="category-title">主な投稿動画</h5>
                 <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="up-streaming-method" name="streaming_method">
-                    <option value="">-- 指定無し --</option>
+                    <option value="指定無し">-- 指定無し --</option>
                     <option value="Live配信">Live配信</option>
                     <option value="編集動画">編集動画</option>
                     <option value="ショート動画">ショート動画</option>
@@ -171,7 +171,7 @@
             <div class="category">
                 <h5 class="category-title">性別</h5>
                 <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="up-gender" name="gender">
-                    <option value="">-- 指定無し --</option>
+                    <option value="指定無し">-- 指定無し --</option>
                     <option value="男性">男性</option>
                     <option value="女性">女性</option>
                     <option value="複数人">複数人</option>
@@ -181,7 +181,7 @@
             <div class="category">
                 <h5 class="category-title">声質</h5>
                 <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="up-voice" name="voice">
-                    <option value="">-- 指定無し --</option>
+                    <option value="指定無し">-- 指定無し --</option>
                     <option value="高め">高め</option>
                     <option value="普通">普通</option>
                     <option value="低め">低め</option>
@@ -195,7 +195,7 @@
             <div class="category">
                 <h5 class="category-title">配信者情報</h5>
                 <select class="form-select form-select-sm"  aria-label=".form-select-sm example" id="up-distributor" name="distributor">
-                    <option value="">-- 指定無し --</option>
+                    <option value="指定無し">-- 指定無し --</option>
                     <option value="音声のみ">音声のみ</option>
                     <option value="本人顔出し">本人顔出し</option>
                     <option value="2Dモデル">2Dモデル</option>
@@ -205,9 +205,9 @@
             </div>
 
             <div class="category">
-                <h5 class="category-title">紹介コメント</h5>
+                <h5 class="category-title">紹介コメント<span>(必須)100文字以内</span></h5>
                 <div class="mb-3">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" name="comment" rows="5" placeholder="例:最近新しく始めた配信者で、ツッコミネタが面白い方です！"></textarea>
+                    <textarea class="form-control @error('comment') is-invalid @enderror" id="exampleFormControlTextarea1" name="comment" rows="5" placeholder="例:最近新しく始めた配信者で、ツッコミネタが面白い方です！"></textarea>
                 </div>
             </div>
 
@@ -240,7 +240,17 @@
                     <br>
                     <button type="button" class="btn btn-success" id="js-search">検索する</button>               
                 </div>
-                <div class="contact blue">
+                <div class="contact blue alert-relative">
+                    @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+
                     <h5>あなたのイチオシを紹介してみよう!</h5>
                     <img class="star" src="img/star.png" alt="">
                     <br>

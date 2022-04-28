@@ -23,7 +23,7 @@ class CreateChannelTable extends Migration
             $table->string('gender')->nullable();
             $table->string('voice')->nullable();
             $table->string('distributor')->nullable();
-            $table->text('comment')->nullable();
+            $table->text('comment');
             $table->timestamps();
         });
     }

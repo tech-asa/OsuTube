@@ -79,18 +79,16 @@ class ChannelController extends Controller
      */
     public function store(Request $request)
     {
-        {   
-            $rules = [
-                'name' => ['required', 'string'],
-                'url' => ['required', 'string'],
-                'genre' => ['required', 'string'],
-                'streaming_method' => ['required', 'string'],
-                'gender' => ['required', 'string'],
-                'voice' => ['required', 'string'],
-                'distributor' => ['required', 'string'],
-            ];
-
-            $this->validate($request, $rules);
+            $request->validate([
+                'name' => 'required|string',
+                'url' => 'required|string',
+                'comment' => 'required|string|max:100',
+            ],
+             [
+                    'name.required' => 'チャンネル名は必須項目です。',
+                    'url.required'  => 'チャンネルURLは必須項目です。',
+                    'comment.required'  => 'コメント欄は必須項目です。',
+             ]);
 
             $channel = new Channel;
             $channel->user_id = $request->user_id;
@@ -106,7 +104,6 @@ class ChannelController extends Controller
 
             return redirect()->route('channel.create');
         }
-    }
 
     /**
      * Display the specified resource.

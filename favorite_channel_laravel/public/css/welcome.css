@@ -1,7 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
 
 /* メイン */
-.main-contents {
+.alert-relative {
+    position: relative;
+}
+
+.alert {
+    font-size: 14px;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding-top: 24px;
 }
 
 .main-image {
