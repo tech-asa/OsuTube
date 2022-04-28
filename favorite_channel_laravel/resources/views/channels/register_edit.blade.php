@@ -8,10 +8,10 @@
 <main>
     <!-- フラッシュメッセージ -->
     @if (session('flash_message'))
-            <div class="flash_message bg-success text-center py-3 my-0">
-                {{ session('flash_message') }}
-            </div>
-        @endif
+        <div class="flash_message bg-success text-center py-3 my-0">
+            {{ session('flash_message') }}
+        </div>
+    @endif
     <div class="register-main-container">
         <div class="" id="login-container">
             <div class="contents">
@@ -80,6 +80,13 @@
                                 </button>
                             </div>
                         </form>
+                        <div class="login-end mb-4">
+                            <a href="{{ route('user.index') }}">
+                                <button type="submit" class="btn btn-warning">
+                                    {{ __('マイページ戻る') }}
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
