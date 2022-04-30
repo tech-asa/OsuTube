@@ -11,10 +11,10 @@
             <div class="contents">
                 <div class="title">{{ __('新規登録画面') }}</div>
                     <div>
-                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">                            @csrf
-
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">                            
+                        @csrf
                             <div class="content">
-                                <label for="name" class="col-form-label text-md-end">{{ __('お名前') }}</label>
+                                <label for="name" class="col-form-label text-md-end">{{ __('お名前') }}</label><span>(必須)</span>
                                 
                                 <div>
                                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -28,7 +28,10 @@
                             </div>
 
                             <div class="content">
-                            <div for="avatar" class="col-form-label text-md-right">{{ __('プロフィール画像') }}<p> (サイズは1024Kbyteまで）</p></div>
+                            <div for="avatar" class="col-form-label text-md-right">{{ __('プロフィール画像') }}
+                                <span>(必須)</span>
+                                <p>(サイズは1024Kbyteまで)</p>
+                            </div>
  
                             <div class="col-md-6">
                                 <input id="avatar" type="file" name="avatar" class="@error('avatar') is-invalid @enderror">
@@ -41,10 +44,10 @@
                         </div>
                             
                             <div class="content">
-                                <label for="nickname" class="col-form-label text-md-end">{{ __('ニックネーム') }}</label>
+                                <label for="nickname" class="col-form-label text-md-end">{{ __('ニックネーム') }}</label><span>(必須 6文字以内)</span>
                                 
                                 <div>
-                                    <input id="nickname" type="text" class="form-control @error('nickname') is-invalid @enderror" name="nickname" value="{{ old('nickname') }}" required autocomplete="nickname" autofocus>
+                                    <input id="nickname" type="text" class="form-control @error('nickname') is-invalid @enderror" name="nickname" value="{{ old('nickname') }}" required autocomplete="nickname" placeholder="◯◯◯◯◯◯">
                                     
                                     @error('ニックネーム')
                                     <span class="invalid-feedback" role="alert">
@@ -55,10 +58,10 @@
                             </div> 
                             
                             <div class="content">
-                                <label for="email" class="col-form-label text-md-end">{{ __('メールアドレス') }}</label>
+                                <label for="email" class="col-form-label text-md-end">{{ __('メールアドレス') }}</label><span>(必須)</span>
                                 
                                 <div>
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="example@example">
                                     
                                     @error('メールアドレス')
                                     <span class="invalid-feedback" role="alert">

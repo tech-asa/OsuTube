@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Channel;
 use App\Models\User;
 
+
 class UserController extends Controller
 {
     /**
@@ -78,20 +79,23 @@ class UserController extends Controller
      */
     public function update(Request $request)
     {
-        // 対象レコード取得
-
         $auth = Auth::user();
 
         // リクエストデータ受取
-
         $form = $request->all();
 
-        // フォームトークン削除
+        if($request->hasFile('avatar')){
+            $avatar=request()->file('avatar')->getClientOriginalName();
+            request()->file('avatar')->storeAs('public/images', $avatar);
+            $form['avatar'] = $avatar;
+        } else {
+            unset($form['avatar']);
+        }
 
+        // フォームトークン削除
         unset($form['_token']);
 
         // レコードアップデート
-
         $auth->fill($form)->save();
 
         return redirect()->route('user.edit')->with('flash_message', '投稿が完了しました');

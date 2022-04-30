@@ -13,7 +13,7 @@
                 <div class="register-contents">
                     <h4 class="title">登録内容</h4>
                     <div class="user-image">
-                        <img src="../img/default_user_icon.png" alt="">
+                        <img src="{{ asset('storage/images/'.$auth->avatar) }}" alt="">
                     </div>
                     <div class="register-content">
                         <h5>お名前</h5>

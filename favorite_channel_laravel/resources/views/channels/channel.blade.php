@@ -114,7 +114,7 @@
                 <div class="register-contents">
                     <h4 class="title">ユーザー情報</h4>
                     <div class="user-image">
-                        <img src="../img/default_user_icon.png" alt="">
+                        <img src="{{ asset('storage/images/'.$auth->avatar) }}" alt="">
                     </div>
                     <div class="register-content">
                         <h5>ニックネーム</h5>
@@ -141,7 +141,8 @@
                     </div>
                     <div class="edit-user">
                         <div class="edit-user-status">
-                            <img src="{{asset('storage/images/'.$channel->user->avatar)}}" class="d-block rounded-circle mb-3">                    <div class="edit-user-nickname">
+                            <img src="{{asset('storage/images/'.$channel->user->avatar)}}" class="d-block rounded-circle mb-3">                   
+                             <div class="edit-user-nickname">
                                 <p>{{ $channel->user->nickname }}</p>
                             </div>
                         </div>

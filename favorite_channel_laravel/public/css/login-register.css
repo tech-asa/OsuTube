@@ -105,3 +105,19 @@ main {
   font-size: 20px;
   text-align: center;
 }
+
+.update-alert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+/* 必須文字 */
+span {
+  color: red;
+  font-size: 14px;
+}
