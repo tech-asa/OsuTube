@@ -85,9 +85,9 @@ class ChannelController extends Controller
                 'comment' => 'required|string|max:100',
             ],
              [
-                    'name.required' => 'チャンネル名は必須項目です。',
-                    'url.required'  => 'チャンネルURLは必須項目です。',
-                    'comment.required'  => 'コメント欄は必須項目(100文字以内)です。',
+                'name.required' => 'チャンネル名は必須項目です。',
+                'url.required'  => 'チャンネルURLは必須項目です。',
+                'comment.required'  => 'コメント欄は必須項目(100文字以内)です。',
              ]);
 
             $channel = new Channel;
@@ -113,7 +113,7 @@ class ChannelController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -124,7 +124,15 @@ class ChannelController extends Controller
      */
     public function edit($id)
     {
-        //
+        $channel = Channel::find($id);
+
+        if (auth()->user()->id != $channel->user_id) {
+            return redirect(route('user.index')->with('error', '許可されていない操作です'));
+        };
+
+        return view("channels.channel_edit", [
+            'channel' => $channel,
+        ]);
     }
 
     /**
@@ -136,7 +144,25 @@ class ChannelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $channel = Channel::find($id);
+
+        $rules = [
+            'user_id' => ['required', 'bigintger'],
+            'name' => ['required', 'string'],
+            'url' => ['required', 'string'],
+            'comment' => ['required', 'string', 'max:100'],
+        ];
+        $this->validate($request, $rules);
+
+        // リクエストデータ受取
+        $form = $request->all();
+
+        // フォームトークン削除
+        unset($form['_token']);
+
+        $channel->fill($form)->save();
+
+        return redirect()->route('channel.edit')->with('message', '更新しました。');
     }
 
     /**

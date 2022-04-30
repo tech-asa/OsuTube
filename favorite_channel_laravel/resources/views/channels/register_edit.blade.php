@@ -34,7 +34,7 @@
                         </div>
 
                         <div class="content">
-                        <div for="avatar" class="col-form-label text-md-right">{{ __('プロフィール画像') }}<p> (サイズは1024Kbyteまで）</p></div>
+                        <div for="avatar" class="mt-2 text-md-right">{{ __('プロフィール画像') }}<p> (サイズは1024Kbyteまで）</p></div>
 
                         <div class="col-md-6">
                             <input id="avatar" type="file" name="avatar" class="@error('avatar') is-invalid @enderror" value="{{ $auth->avatar }}">

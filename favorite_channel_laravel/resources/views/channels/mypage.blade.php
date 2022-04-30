@@ -70,8 +70,9 @@
                             </div>
                         </div>
                         <div class="report">
-                            <a href=""></a>
-                            <button type="button" class="btn btn-outline-primary">編集する</button>
+                            <a href="{{ route('channel.edit', $channel->id) }}">
+                                <button type="button" class="btn btn-outline-primary">編集する</button>
+                            </a>
                         </div>
                     </div>  
                 @endforeach  

@@ -23,6 +23,8 @@ Route::get('/channel', [App\Http\Controllers\ChannelController::class, 'index'])
 Route::get('/edit_confirm', [App\Http\Controllers\ChannelController::class, 'create'])->name('channel.create');
 // 投稿を押した時
 Route::post('/edit_confirm', [App\Http\Controllers\ChannelController::class, 'store'])->name('channel.store');
+Route::get('/channel_edit/{id}', [App\Http\Controllers\ChannelController::class, 'edit'])->name('channel.edit');
+
 
 Route::get('/mypage', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('user.index');
 Route::get('/mypage_edit', [App\Http\Controllers\Admin\UserController::class, 'edit'])->name('user.edit');
