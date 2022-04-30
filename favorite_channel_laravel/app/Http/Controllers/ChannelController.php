@@ -147,7 +147,6 @@ class ChannelController extends Controller
         $channel = Channel::find($id);
 
         $rules = [
-            'user_id' => ['required', 'bigintger'],
             'name' => ['required', 'string'],
             'url' => ['required', 'string'],
             'comment' => ['required', 'string', 'max:100'],
@@ -162,7 +161,7 @@ class ChannelController extends Controller
 
         $channel->fill($form)->save();
 
-        return redirect()->route('channel.edit')->with('message', '更新しました。');
+        return redirect()->route('user.index');
     }
 
     /**

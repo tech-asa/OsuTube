@@ -24,6 +24,7 @@ Route::get('/edit_confirm', [App\Http\Controllers\ChannelController::class, 'cre
 // 投稿を押した時
 Route::post('/edit_confirm', [App\Http\Controllers\ChannelController::class, 'store'])->name('channel.store');
 Route::get('/channel_edit/{id}', [App\Http\Controllers\ChannelController::class, 'edit'])->name('channel.edit');
+Route::post('/channel_edit/{id}', [App\Http\Controllers\ChannelController::class, 'update'])->name('channel.update');
 
 
 Route::get('/mypage', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('user.index');
