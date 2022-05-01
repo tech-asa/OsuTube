@@ -17,18 +17,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::post('/', [App\Http\Controllers\ChannelController::class, 'home'])->name('home');
-Route::get('/channel', [App\Http\Controllers\ChannelController::class, 'index'])->name('channel.index');
-// 表示用
-Route::get('/edit_confirm', [App\Http\Controllers\ChannelController::class, 'create'])->name('channel.create');
-// 投稿を押した時
-Route::post('/edit_confirm', [App\Http\Controllers\ChannelController::class, 'store'])->name('channel.store');
-Route::get('/channel_edit/{id}', [App\Http\Controllers\ChannelController::class, 'edit'])->name('channel.edit');
-Route::post('/channel_edit/{id}', [App\Http\Controllers\ChannelController::class, 'update'])->name('channel.update');
+// チャンネル一覧表示
+    Route::get('/channel', [App\Http\Controllers\ChannelController::class, 'index'])->name('channel.index');
 
+    Auth::routes();
+// ログイン時のみ可能
+    Route::group(['middleware' => 'auth'], function()
+    {  
+        // 投稿チャンネル機能
+            Route::post('/edit_confirm', [App\Http\Controllers\ChannelController::class, 'store'])->name('channel.store');
+            Route::get('/channel_edit/{id}', [App\Http\Controllers\ChannelController::class, 'edit'])->name('channel.edit');
+            Route::post('/channel_edit/{id}', [App\Http\Controllers\ChannelController::class, 'update'])->name('channel.update');
+            
+        // チャンネル投稿確認画面
+            Route::get('/edit_confirm', [App\Http\Controllers\ChannelController::class, 'create'])->name('channel.create');
+        
+        // マイページ機能
+            Route::get('/mypage', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('user.index');
+            Route::get('/mypage_edit', [App\Http\Controllers\Admin\UserController::class, 'edit'])->name('user.edit');
+            Route::post('/mypage_edit', [App\Http\Controllers\Admin\UserController::class, 'update'])->name('user.update');
 
-Route::get('/mypage', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('user.index');
-Route::get('/mypage_edit', [App\Http\Controllers\Admin\UserController::class, 'edit'])->name('user.edit');
-Route::post('/mypage_edit', [App\Http\Controllers\Admin\UserController::class, 'update'])->name('user.update');
-
-Auth::routes();
+        // メール送信機能
+            Route::get('/mail', [MailController::class,'index']);
+            Route::post('/mail', [MailController::class,'send']);
+    });
