@@ -59,12 +59,32 @@ main {
     z-index: 1;
 }
 
+.user-infomations .channel-info{
+    display: block;
+    text-align: center;
+	font-size:clamp(10px, 1vw, 16px);
+    color: black;
+    border: 2px solid rgb(255, 234, 0);
+    border-radius: 5px;
+    background-color: rgb(255, 254, 175);
+    margin: 0 20px;
+    padding: 15px 0;
+}
+
 .user-infomations .title {
     text-align: center;
     padding: 0;
     margin: 20px 0 10px;
     border-bottom: 1px dotted black;
 }
+
+.non-login {
+    width: 100%;
+    margin: 15px 0 10px;
+    padding: 10px 0;
+	font-size:clamp(10px, 1.2vw, 14px);
+}
+
 
 .register-contents .edit-button {
     width: 50%;

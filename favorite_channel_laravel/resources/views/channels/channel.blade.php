@@ -1,5 +1,5 @@
 @push('css')
-    <link href="{{ asset('css/post-list.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/channel.css') }}" rel="stylesheet">
 @endpush
 
 @extends('layouts.app')
@@ -108,11 +108,11 @@
         <div class="main-content">
 
             <!-- サイドバー -->
-            @if (Route::has('login'))
-            @auth
             <div class="user-infomations">
                 <div class="register-contents">
                     <h4 class="title">ユーザー情報</h4>
+                    @if (Route::has('login'))
+                    @auth
                     <div class="user-image">
                         <img src="{{ asset('storage/images/'.$auth->avatar) }}" alt="">
                     </div>
@@ -127,10 +127,20 @@
                     <div class="edit-button">
                         <a href="{{ route('user.index') }}"><button type="button" class="btn btn-outline-primary">マイページ</button></a>
                     </div>
-                </div>
+                    @else
+                    <div class="edit-button">
+                        <a href="{{ route('login') }}"><button type="button" class="btn btn-outline-primary non-login">ログインする</button></a>
+                    </div>                    
+                    @if (Route::has('register'))
+                    <div class="edit-button">
+                        <a href="{{ route('register') }}"><button type="button" class="btn btn-outline-primary non-login">新規登録する</button></a>
+                    </div>                    
+                    @endif
+                    @endauth
+                    @endif    
+                </div>   
+                <p class="channel-info">チャンネル名をクリックすると<br>チャンネル画面に移動できます！</p>
             </div>
-            @endauth
-            @endif    
 
             <!-- チャンネル一覧部分 -->
             <div class="channel-content">
@@ -175,7 +185,7 @@
                     </div>
                     <div class="report">
                         <a href=""></a>
-                        <button type="button" class="btn btn-outline-danger">通報する</button>
+                        <button type="button" class="btn btn-outline-danger">報告する</button>
                     </div>
                 </div>  
                 @endforeach
