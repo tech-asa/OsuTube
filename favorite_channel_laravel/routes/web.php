@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 // チャンネル一覧表示
     Route::get('/channel', [App\Http\Controllers\ChannelController::class, 'index'])->name('channel.index');
@@ -28,7 +28,7 @@ Route::get('/', function () {
             Route::post('/edit_confirm', [App\Http\Controllers\ChannelController::class, 'store'])->name('channel.store');
             Route::get('/channel_edit/{id}', [App\Http\Controllers\ChannelController::class, 'edit'])->name('channel.edit');
             Route::post('/channel_edit/{id}', [App\Http\Controllers\ChannelController::class, 'update'])->name('channel.update');
-            
+
         // チャンネル投稿確認画面
             Route::get('/edit_confirm', [App\Http\Controllers\ChannelController::class, 'create'])->name('channel.create');
         

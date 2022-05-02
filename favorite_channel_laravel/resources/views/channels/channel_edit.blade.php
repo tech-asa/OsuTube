@@ -129,7 +129,7 @@
                 <button class="btn btn-outline-primary" type="submit">更新</button>
             </div>
         </form>
-        <div class="d-grid gap-2 col-6 mx-auto search-buttom">
+        <div class="d-grid gap-2 col-6 mx-auto back-buttom">
             <a href="{{ route('user.index') }}">
                 <button type="submit" class="btn btn-outline-primary">
                     {{ __('マイページ戻る') }}

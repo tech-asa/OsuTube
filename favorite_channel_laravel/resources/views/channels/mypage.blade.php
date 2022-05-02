@@ -35,6 +35,14 @@
             
             <div class="channel-infomations">
                 <div class="channel-content">
+                    @if(!isset($channels[0]))
+                    <div class="non-channel">
+                        <h5>投稿チャンネルがありません。</h5>
+                        <a href="{{ route('welcome') }}">
+                            <button type="button" class="btn btn-primary" id="js-up">投稿してみましょう！</button>
+                        </a>
+                    </div>
+                    @endif
                 @foreach ($channels as $channel)
                     <div class="content">
                         <div class="update-time">

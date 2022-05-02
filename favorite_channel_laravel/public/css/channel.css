@@ -101,7 +101,8 @@ main {
 }
 
 .register-contents .user-image {
-    width: 30%;
+    width: 80px;
+    height: 80px;
     margin: 0 auto 20px;
     border: 2px solid gray;
     border-radius: 50%;
@@ -110,6 +111,8 @@ main {
 .register-contents img{
     border-radius: 50%;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .register-content h5 {

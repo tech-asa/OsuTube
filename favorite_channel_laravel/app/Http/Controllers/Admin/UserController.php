@@ -98,7 +98,7 @@ class UserController extends Controller
         // レコードアップデート
         $auth->fill($form)->save();
 
-        return redirect()->route('user.edit')->with('flash_message', '投稿が完了しました');
+        return redirect()->route('user.index');
     }
 
     /**
