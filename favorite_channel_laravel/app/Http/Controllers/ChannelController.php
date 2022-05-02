@@ -51,7 +51,7 @@ class ChannelController extends Controller
             $query->where('comment', $comment)->get();
         }
 
-        $channels = $query->paginate(20);
+        $channels = $query->orderBy('created_at', 'desc')->paginate(20);
         $auth = Auth::user();
         $auth_id = Auth::id();
 
