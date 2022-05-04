@@ -56,7 +56,7 @@
                                 <p>{{ $channel->comment }}</p>
                             </div>
                         </div>
-                        <div class="bg-red oblique-gloss solid-shadow channel">
+                        <div class="bg-red oblique-gloss solid-shadow channel" onClick="location.href='https://www.youtube.com/channel/{{ $channel->url }}'">
                         <div class="channel-image">
                             @if ($channel->gender === '男性')
                             <img src="img/man.png" alt="">
@@ -69,7 +69,7 @@
                             @endif
                         </div>
                             <div class="channel-status">
-                                <a href="https://www.youtube.com/channel/{{ $channel->url }}">{{ $channel->name }}</a>
+                                <h4>{{ $channel->name }}</h4>
                                 <div class="categories">
                                     <p class="genre-category"><span>ジャンル: </span>{{ $channel->genre }}</p>
                                     <p class="streaming-method-category"><span>主な投稿動画: </span>{{ $channel->streaming_method }}</p>
