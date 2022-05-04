@@ -153,7 +153,9 @@
                     </div>
                     <div class="edit-user">
                         <div class="edit-user-status">
-                            <img src="{{asset('storage/images/'.$channel->user->avatar)}}" class="d-block rounded-circle mb-3">                   
+                            <div class="edit-user-image">
+                                <img src="{{asset('storage/images/'.$channel->user->avatar)}}" class="d-block rounded-circle mb-3">                   
+                            </div>
                              <div class="edit-user-nickname">
                                 <p>{{ $channel->user->nickname }}</p>
                             </div>
