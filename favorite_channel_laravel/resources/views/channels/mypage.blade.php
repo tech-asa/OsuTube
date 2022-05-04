@@ -3,6 +3,8 @@
 @endpush
 
 @extends('layouts.app')
+
+@section('title', 'OsuTube | マイページ')
  
 @section('content')
 <main>

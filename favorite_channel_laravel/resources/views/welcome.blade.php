@@ -1,12 +1,24 @@
+@extends('layouts.app')
+
 @push('css')
     <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
 @endpush
 
-@extends('layouts.app')
-
+@section('title', 'OsuTube | ホーム')
 @section('content')
 <main>
-    <!-- 検索モーダル -->
+    <div id="loading">
+        <div id="load">
+            <div>G</div>
+            <div>N</div>
+            <div>I</div>
+            <div>D</div>
+            <div>A</div>
+            <div>O</div>
+            <div>L</div>
+        </div>    
+    </div>
+<!-- 検索モーダル -->
     <div id="js-modal-background"></div>
     <div class="search-modal" id="js-search-modal">
         <div class="modal-header">

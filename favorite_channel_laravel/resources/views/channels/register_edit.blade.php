@@ -4,6 +4,8 @@
 
 @extends('layouts.app')
 
+@section('title', 'OsuTube | 登録内容編集')
+
 @section('content')
 <main>
     <!-- フラッシュメッセージ -->

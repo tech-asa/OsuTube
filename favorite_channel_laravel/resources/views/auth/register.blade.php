@@ -4,6 +4,8 @@
 
 @extends('layouts.app')
 
+@section('title', 'OsuTube | 新規登録画面')
+
 @section('content')
 <main>
     <div class="register-main-container">

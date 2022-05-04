@@ -3,7 +3,9 @@
 @endpush
 
 @extends('layouts.app')
- 
+
+@section('title', 'OsuTube | 投稿完了画面')
+
 @section('content')
 <main>
     <div class="register-main-container">

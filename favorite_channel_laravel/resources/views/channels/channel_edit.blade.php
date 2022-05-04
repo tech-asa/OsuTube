@@ -4,6 +4,8 @@
 
 @extends('layouts.app')
 
+@section('title', 'OsuTube | チャンネル編集画面')
+
 @section('content')
 <main>
     <!-- 投稿モーダル -->
