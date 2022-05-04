@@ -205,6 +205,15 @@ main {
     background-image:         linear-gradient(45deg,transparent 40%,rgba(255,255,255,.3) 40%,rgba(255,255,255,.3) 60%,transparent 60%);
     background-repeat: no-repeat;
     border-bottom: 5px solid rgba(0,0,0,.4);
+    transition: 0.25s;
+    transform: scale(1 1);
+}
+
+.channel:hover {
+    cursor: pointer;
+    background-color: rgb(255, 162, 0);
+    transition: 0.5s;
+    transform: scale(1.05, 1.05);
 }
 
 .channel-image {
@@ -226,10 +235,8 @@ main {
     width: 70%;
 }
 
-.content .channel .channel-status a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
+.content .channel .channel-status h4 {
+
 }
 
 .content .channel .channel-status .categories {
