@@ -6,6 +6,9 @@
     <div class="header-logout">
         @if (Route::has('login'))
         @auth
+        <a href="{{ route('user.index') }}">
+            <input class="btn btn-outline-primary" type="submit" value="マイページ">
+        </a>
         <form action="{{ route('logout') }}" method="post">
             @csrf
             <input class="btn btn-outline-primary" type="submit" value="ログアウト">
