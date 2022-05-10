@@ -242,7 +242,18 @@
     <div class="main-contents">
         <div class="main-image">
             <img src="../img/main_image.jpg" alt="">
+            <div class="responsible-modal" id="js-responsible-modal">
+                <div class="responsible-modal-texts">
+                    <p class="responsible-modal-text">当サイトは</p>
+                    <p class="responsible-modal-text">あなたのオススメ配信者を</p>
+                    <p class="responsible-modal-text">周りと簡単に共有でき</p>
+                    <p class="responsible-modal-text">検索できる配信者応援サイトです。</p>
+                    <p class="responsible-modal-text">あなたが応援したい配信者の方を</p>
+                    <p class="responsible-modal-text">投稿してみましょう！</p>
+                </div>
+            </div>
         </div>
+            <!-- レスポンシブデザイン対応 -->
         <div class="section">
             <div class="main-access">
                 <div class="first-introduction">

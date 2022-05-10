@@ -7,6 +7,7 @@
 @section('title', 'OsuTube | 新規登録画面')
 
 @section('content')
+
 <main>
     <div class="register-main-container">
         <div class="" id="login-container">
@@ -21,7 +22,7 @@
                                 <div>
                                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                     
-                                    @error('お名前')
+                                    @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -37,7 +38,7 @@
  
                             <div class="col-md-6">
                                 <input id="avatar" type="file" name="avatar" class="@error('avatar') is-invalid @enderror">
-                                @error('プロフィール画像')
+                                @error('avatar')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -51,7 +52,7 @@
                                 <div>
                                     <input id="nickname" type="text" class="form-control @error('nickname') is-invalid @enderror" name="nickname" value="{{ old('nickname') }}" required autocomplete="nickname" placeholder="◯◯◯◯◯◯">
                                     
-                                    @error('ニックネーム')
+                                    @error('nickname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -63,9 +64,8 @@
                                 <label for="email" class="col-form-label text-md-end">{{ __('メールアドレス') }}</label><span>(必須)</span>
                                 
                                 <div>
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="example@example">
-                                    
-                                    @error('メールアドレス')
+                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="example@example">   
+                                    @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -79,7 +79,7 @@
                                 <div>
                                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                                     
-                                    @error('パスワード')
+                                    @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -91,7 +91,12 @@
                                 <label for="password-confirm" class="col-form-label text-md-end">{{ __('確認用パスワード') }}</label>
                                 
                                 <div>
-                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                    <input id="password-confirm" type="password" class="form-control @error('password-confirm') is-invalid @enderror" name="password_confirmation" required autocomplete="new-password">
+                                    @error('password-confirm')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                                 </div>
                             </div>                            
                             <div class="login-end mb-4">
