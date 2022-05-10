@@ -125,9 +125,10 @@ class ChannelController extends Controller
     public function edit($id)
     {
         $channel = Channel::find($id);
+        $user_id = Auth::id();
 
-        if (auth()->user()->id != $channel->user_id) {
-            return redirect(route('user.index')->with('error', '許可されていない操作です'));
+        if ($user_id !== $channel->user_id) {
+            return redirect()->route('login')->with('error', '許可されていない操作です');
         };
 
         return view("channels.channel_edit", [
@@ -172,6 +173,15 @@ class ChannelController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $channel = Channel::find($id);
+        $auth_id = Auth::id();
+
+        if ($auth_id !== $channel->user_id) {
+            return redirect()->route('login')->with('error', '許可されていない操作です');
+        };
+
+        $channel->delete();
+
+        return redirect()->route('user.index')->with('message', '削除しました。');
     }
 }
