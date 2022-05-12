@@ -1,9 +1,11 @@
 <header>
+    <!-- ヘッダータイトル -->
     <div class="header-contents">
         <h1 class="header-title"><a href="/">Osu<span>Tube</span></a></h1>
-        <!-- <p class="header-subtext"></p> -->
     </div>
-    <div class="header-logout">
+
+    <!-- ヘッダーログアウト機能 -->
+    <div class="header-logout non-responsive">
         @if (Route::has('login'))
         @auth
         <a href="{{ route('user.index') }}">
@@ -14,6 +16,33 @@
             <input class="btn btn-outline-primary" type="submit" value="ログアウト">
         </form>
         @endauth
-        @endif   
+        @endif
     </div>
+
+    <div class="header-logout responsive-var">
+        <button class="btn-menu" id="js-humberger">
+            <div id=js-bar1></div>
+            <div id=js-bar2></div>
+            <div id=js-bar3></div>
+        </button>
+    </div>
+
+    <!-- メニュー変化 -->
+        <nav class="menu-list responsive-var">
+            <ul>
+                @if (Route::has('login'))
+                @auth
+                <a href="{{ route('user.index') }}">
+                    <li>マイページ</li>
+                </a>
+                <li>
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <input type="submit" value="ログアウト">
+                    </form>
+                </li>
+                @endauth
+                @endif   
+            </ul>
+        </nav>
 </header>

@@ -27,6 +27,7 @@
         @include('layouts.footer')
     <!-- Scripts -->
     <script src="{{ asset('js/home.js') }}"></script>
+    <script src="{{ asset('js/header.js') }}"></script>
 </body>
  
 </html>

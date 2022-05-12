@@ -67,6 +67,10 @@ header span {
   margin-right: 20px;
 }
 
+header .btn-menu {
+  display: none;
+}
+
 /* フッター */
 footer .space {
   width: 100%;
@@ -79,10 +83,136 @@ footer .space {
   z-index: 100;
 }
 
+.responsive-var {
+  display: none;
+}
+
+
 @media (max-width:700px) {
-  .header-logout {
+  .non-responsive {
     display: none;
   }
+
+  .responsive-var {
+    display: block;
+  }
+
+  /* ヘッダーボタン */  
+  header .menu-list a {
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .menu-list ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-list li {
+    list-style: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all  0.3s ease;
+  }
+
+  .menu-list li:hover {
+    background-color:cyan;
+  }
+  
+  .menu-list li:first-child {
+    padding: 1rem 0;
+    border-bottom: 1px solid black;
+  }
+   
+  /* ボタン */
+  header .btn-menu {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    border: 0px;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+   
+  /* メニュー */
+  .menu-list {
+    background-color: white;
+    position: absolute;
+    z-index: 100;
+    top: 85px;
+    overflow-x: hidden;
+    width: 0;
+    transition: .5s;
+  }
+
+  .menu-list input {
+    border: none;
+    background-color: white;
+    width: 100%;
+    line-height: 55px;
+    padding: 0;
+    margin: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all  0.3s ease;
+  }
+
+  .menu-list input:hover {
+    background-color: coral;
+    color: white;
+  }
+  
+  .menu-list a {
+    display: block;
+    width: 100%;
+  }
+
+  /* メニューを開いた時 */
+  .open-menu {
+    width: 100%;
+  }
+
+  #js-humberger {
+    position: relative;
+    margin-top: 55px;
+    height: 20px;
+    width: 28px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
+  #js-humberger div {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    width: 28px;
+    background-color: #444;
+    border-radius: 2px;
+    display: inline-block;
+    box-sizing: border-box;
+    transition: 0.5s;             /* 1秒かけて動く */
+  }
+
+  #js-bar1 {
+    bottom: 20px;
+  }
+  #js-bar2 {
+    bottom: 10px;
+  }
+  #js-bar3 {
+    bottom: 0px;
+  }
+
+  .bar-active {
+    opacity: 0;
+    /* bottom: 10px; */
+    transition: 0.5s;             /* 1秒かけて動く */
+  }
+
 }
 
 :root {
