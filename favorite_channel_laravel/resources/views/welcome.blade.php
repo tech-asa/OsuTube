@@ -232,9 +232,12 @@
     <!-- サイト紹介モーダル -->
     <div class="introduction-modal" id="js-introduction-modal">
         <div class="introduction-text-box">
-            <p class="introduction-text">当サイトは<br>あなたのオススメ配信者を
-                <br>周りと簡単に共有でき、検索できる配信者応援サイトです。<br>あなたが応援したい配信者の方を投稿してみましょう！
-            </p>
+            <p class="introduction-modal-text">当サイトは</p>
+            <p class="introduction-modal-text">あなたのオススメ配信者を</p>
+            <p class="introduction-modal-text">周りと簡単に共有でき</p>
+            <p class="introduction-modal-text">検索できる配信者応援サイトです。</p>
+            <p class="introduction-modal-text">あなたが応援したい配信者の方を</p>
+            <p class="introduction-modal-text">投稿してみましょう！</p>
         </div>
     </div>
 
@@ -243,7 +246,7 @@
         <div class="main-image">
             <img src="../img/main_image.jpg" alt="">
             <div class="responsible-modal" id="js-responsible-modal">
-                <div class="responsible-modal-texts">
+                <div class="responsible-modal-texts fadeConts">
                     <p class="responsible-modal-text">当サイトは</p>
                     <p class="responsible-modal-text">あなたのオススメ配信者を</p>
                     <p class="responsible-modal-text">周りと簡単に共有でき</p>
