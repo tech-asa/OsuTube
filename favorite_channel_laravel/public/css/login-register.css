@@ -124,3 +124,36 @@ main {
   color: red;
   font-size: 14px;
 }
+
+@media (max-width:700px) {
+  #login-container {
+    width: 80%;
+    /* height: 100%; */
+  }
+
+  #avatar {
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+
+  .login-end button {
+    width: 60%;
+  }
+
+  .new-edit button{
+    width: 60%;
+  }
+
+  .edit-text {
+    font-size: 10px;
+    padding: 0.5rem;
+  }
+
+  /* 必須文字 */
+.content span {
+  color: red;
+  font-size: 12px;
+}
+
+
+}

@@ -19,6 +19,8 @@
         @endif
     </div>
 
+    @if (Route::has('login'))
+    @auth
     <div class="header-logout responsive-var">
         <button class="btn-menu" id="js-humberger">
             <div id=js-bar1></div>
@@ -26,6 +28,8 @@
             <div id=js-bar3></div>
         </button>
     </div>
+    @endauth
+    @endif   
 
     <!-- メニュー変化 -->
         <nav class="menu-list responsive-var">
