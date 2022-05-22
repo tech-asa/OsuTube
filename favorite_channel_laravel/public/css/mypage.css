@@ -260,4 +260,8 @@ main {
         font-size: 12px;
     }
 
+    .non-channel {
+        margin: 10px auto 0;
+    }
+
 }
