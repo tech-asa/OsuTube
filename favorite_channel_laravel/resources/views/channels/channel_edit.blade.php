@@ -1,5 +1,5 @@
 @push('css')
-    <link href="{{ asset('css/channel_edit.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/channel_edit.css', true) }}" rel="stylesheet">
 @endpush
 
 @extends('layouts.app')

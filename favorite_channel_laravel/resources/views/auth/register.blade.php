@@ -1,5 +1,5 @@
 @push('css')
-    <link href="{{ asset('css/login-register.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/login-register.css', true) }}" rel="stylesheet">
 @endpush
 
 @extends('layouts.app')

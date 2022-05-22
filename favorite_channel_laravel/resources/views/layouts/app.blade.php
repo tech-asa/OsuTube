@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     
     <!-- Scripts -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet"> 
+    <link href="{{ asset('css/app.css', true) }}" rel="stylesheet"> 
     @stack('css')
 </head>
 

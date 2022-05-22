@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @push('css')
-    <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/welcome.css', true) }}" rel="stylesheet">
 @endpush
 
 @section('title', 'OsuTube | ホーム')
