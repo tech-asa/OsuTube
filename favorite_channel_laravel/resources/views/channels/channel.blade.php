@@ -187,10 +187,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="report">
+                    <!-- <div class="report">
                         <a href=""></a>
                         <button type="button" class="btn btn-outline-danger">報告する</button>
-                    </div>
+                    </div> -->
                 </div>  
                 @endforeach
             </div>
