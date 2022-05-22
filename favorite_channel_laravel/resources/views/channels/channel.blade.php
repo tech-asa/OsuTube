@@ -1,5 +1,5 @@
 @push('css')
-    <link href="{{ asset('css/channel.css', true) }}" rel="stylesheet">
+    <link href="{{ asset('css/channel.css') }}" rel="stylesheet">
 @endpush
 
 @extends('layouts.app')
@@ -187,10 +187,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="report">
-                        <a href=""></a>
-                        <button type="button" class="btn btn-outline-danger">報告する</button>
-                    </div>
                 </div>  
                 @endforeach
             </div>
@@ -198,5 +194,5 @@
     </div>
 </main>
 <!-- Scripts -->
-<script src="{{ asset('js/channel.js', true) }}"></script>
+<script src="{{ asset('js/channel.js') }}"></script>
 @endsection

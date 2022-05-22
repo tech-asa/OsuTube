@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     
     <!-- Scripts -->
-    <link href="{{ asset('css/app.css', true) }}" rel="stylesheet"> 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet"> 
     @stack('css')
 </head>
 
@@ -26,8 +26,8 @@
         
         @include('layouts.footer')
     <!-- Scripts -->
-    <script src="{{ asset('js/home.js', true) }}"></script>
-    <script src="{{ asset('js/header.js, true') }}"></script>
+    <script src="{{ asset('js/home.js') }}"></script>
+    <script src="{{ asset('js/header.js') }}"></script>
 </body>
  
 </html>
