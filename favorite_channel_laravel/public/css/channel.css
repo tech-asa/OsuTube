@@ -350,6 +350,11 @@ main {
 }
 
 @media (max-width:700px) {
+    body {
+        height: 100vh;
+    }
+    
+
     .user-infomations {
         display: none;
     }
