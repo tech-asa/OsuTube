@@ -123,7 +123,7 @@
             <div class="category">
                 <h5 class="category-title">紹介コメント<span>(必須)100文字以内</span></h5><p>現在：{{ $channel->comment }}</p>
                 <div class="mb-3">
-                    <textarea class="form-control @error('comment') is-invalid @enderror" id="exampleFormControlTextarea1" name="comment" rows="5" placeholder="例:最近新しく始めた配信者で、ツッコミネタが面白い方です！" value="{{ $channel->comment }}"></textarea>
+                    <textarea class="form-control @error('comment') is-invalid @enderror" id="exampleFormControlTextarea1" name="comment" rows="5" value="{{ $channel->comment }}"></textarea>
                 </div>
             </div>
 
