@@ -1,5 +1,5 @@
 @push('css')
-    <link href="{{ asset('css/mypage.css', true) }}" rel="stylesheet">
+    <link href="{{ asset('css/mypage.css') }}" rel="stylesheet">
 @endpush
 
 @extends('layouts.app')
@@ -56,7 +56,7 @@
                                 <p>{{ $channel->comment }}</p>
                             </div>
                         </div>
-                        <div class="bg-red oblique-gloss solid-shadow channel" onClick="location.href='https://www.youtube.com/channel/{{ $channel->url }}'">
+                        <div class="bg-red oblique-gloss solid-shadow channel" onClick="window.open('https://www.youtube.com/channel/{{ $channel->url }}', '_blank')" rel="noopener noreferrer">
                         <div class="channel-image">
                             @if ($channel->gender === '男性')
                             <img src="img/man.png" alt="">
