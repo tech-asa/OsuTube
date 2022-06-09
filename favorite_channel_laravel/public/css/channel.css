@@ -5,6 +5,7 @@ body {
     background-image: url(../img/background-colorful.png);
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100%;
 }
 
 main {
@@ -270,7 +271,13 @@ main {
 .content .report button:hover {
     cursor: pointer;
 }
- 
+
+.paginator {
+    width: 10px;
+    margin-left: 40%;
+    margin-top: 20px;
+}
+
 /* 検索ヘッダー部分 */
 .search-header {
     text-align: center;
@@ -350,10 +357,6 @@ main {
 }
 
 @media (max-width:700px) {
-    body {
-        height: 100vh;
-    }
-    
 
     .user-infomations {
         display: none;
@@ -387,6 +390,11 @@ main {
     
     .content .channel .channel-status .categories span {
         font-size: 12px;
+    }
+
+    .paginator {
+        margin-left: 35%;
+        margin-bottom: 20px;
     }
 
     .search-modal {

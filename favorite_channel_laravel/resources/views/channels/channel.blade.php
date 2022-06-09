@@ -193,6 +193,9 @@
                     </div> -->
                 </div>  
                 @endforeach
+                <div class="paginator">
+                    {{ $channels->links() }}
+                </div>
             </div>
         </div>
     </div>

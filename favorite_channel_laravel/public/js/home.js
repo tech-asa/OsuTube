@@ -9,7 +9,7 @@ if (!sessionStorage.getItem(keyName)) {
     //ここに初回アクセス時の処理
     window.setTimeout(function(){
         document.getElementById('loading').style.display = "none";
-    }, 3700);
+    }, 3500);
     } else {
     //ここに通常アクセス時の処理
     document.getElementById('loading').style.display = "none";
@@ -41,7 +41,7 @@ const up = new Modal('js-up', 'js-up-modal', 'js-modal-background');
 const introduction = new Modal('js-introduction', 'js-introduction-modal', 'js-modal-background');
 
 try{  
-    //エラー出るかもしれないけど実行したい処理  
+    //エラー出るかもしれないけど実行したい処理
     up.getModal();
     up.outModal();
     }catch(e){  
@@ -53,7 +53,6 @@ try{
     introduction.getModal();
     introduction.outModal();
 };
-
 
 // レスポンシブデザイン：フェードイン
     let fadeConts = document.querySelectorAll('.fadeConts'); // フェードさせる要素の取得
