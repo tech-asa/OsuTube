@@ -25,3 +25,4 @@ const search = new Modal('js-search', 'js-search-modal', 'js-modal-background');
 
 search.getModal();
 search.outModal();
+
