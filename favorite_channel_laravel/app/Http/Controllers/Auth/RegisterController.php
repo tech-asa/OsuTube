@@ -51,16 +51,17 @@ class RegisterController extends Controller
     {
         $validator = Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'avatar'=>['required','image'],
+            'avatar' => ['image'],
             'nickname' => ['required', 'string', 'max:6'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
         $validator->setAttributeNames(array(
+            'name' => '名前',
             'avatar' => 'プロフィール画像',
             'nickname' => 'ニックネーム',
         ));
-        
+
         return $validator;
     }
 
@@ -70,18 +71,24 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-     protected function create(array $data)
-        {
-            $avatar=request()->file('avatar')->getClientOriginalName();
+    protected function create(array $data)
+    {
+        $avatar = "";
+
+        if (request()->file('avatar')) {
+            $avatar = request()->file('avatar')->getClientOriginalName();
             request()->file('avatar')->storeAs('public/images', $avatar);
-     
-            $user = User::create([
-                'name' => $data['name'],
-                'nickname' => $data['nickname'],
-                'email' => $data['email'],
-                'avatar' => $avatar,
-                'password' => Hash::make($data['password']),
-            ]);
-            return $user;
+        } else {
+            $avatar = 'default_user_icon.png';
         }
+
+        $user = User::create([
+            'name' => $data['name'],
+            'nickname' => $data['nickname'],
+            'email' => $data['email'],
+            'avatar' => $avatar,
+            'password' => Hash::make($data['password']),
+        ]);
+        return $user;
     }
+}
