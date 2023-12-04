@@ -4,7 +4,7 @@
 当サイトは、あなたのオススメ配信者を 周りと簡単に共有でき、検索できる配信者応援サイトです. あなたが応援したい配信者の方を投稿してみましょう！
 
 ## 制作物URL 
-https://osutube.site/
+https://osutube.site/ (今は提供停止中)
 
 ## 画像添付（DEMO）
 <img width="1345" alt="スクリーンショット 2022-06-10 14 27 39" src="https://user-images.githubusercontent.com/97378465/172996727-65d4495e-4b83-40c2-bc58-eb0c38ebc909.png">
